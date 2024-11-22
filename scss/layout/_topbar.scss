@@ -8,11 +8,14 @@
   background-color: var(--first-background-color);
   padding-top: 3rem;
   padding-bottom: 3rem;
-
   .dropdown__vector {
     @extend %isAbsoluted;
-    left: 0rem;
-    bottom: -2.7rem;
+    bottom: -3.2rem;
+    z-index: 9;
+    color: var(--second-background-color);
+    filter: drop-shadow();
+    .dropdown__vector--icon {
+    }
   }
 
   .row {
@@ -45,8 +48,15 @@
         .topbar__nav--item {
           @extend %alignmentBox;
           gap: 0.6rem;
+          height: 5rem;
+
+          &.department {
+            background-color: green;
+          }
 
           .topbar__nav--item-link {
+            @extend %alignmentBox;
+            height: 100%;
             color: var(--first-typo-color);
             @extend %medium-fifteen-font;
           }

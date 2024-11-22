@@ -7,8 +7,8 @@ body {
     top: 0rem;
     z-index: 9;
     background-color: var(--first-background-color);
-    &:has(.department:hover) .department-dropdown {
-      display: flex;
-    }
+    // &:has(.department:hover) .department-dropdown {
+    //   display: flex;
+    // }
   }
 }

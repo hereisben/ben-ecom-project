@@ -25,12 +25,17 @@
     <title>Ben Ecommerce Project</title>
     <!-- Load Script -->
     <script src="./js/scripts.js"></script>
+    <!-- Hide/Show Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <header id="header" class="header"></header>
+    <!-- LOAD INNER HTML -->
     <script>
       /*Load Main Header*/
       load("#header", "./template/header.html");
+      /*Load Dropdown Vector*/
+      load("#dropdown-vector", "./template/dropdown-vector.html");
       /*Load All Department*/
       load("#all-department", "./template/all-department.html");
       /*Load TV & Video*/
@@ -43,6 +48,16 @@
       load("#savings", "./template/savings.html");
       /*Load Cellphones*/
       load("#cell-phones", "./template/cell-phones.html");
+    </script>
+
+    <!-- DROPDOWN TOGGLE -->
+    <script>
+      $("#department-toggle").on("mouseover", function () {
+        $("#department-dropdown").css("display", "flex").fadeIn("slow");
+      });
+      $("#department-dropdown").on("mouseleave", function () {
+        $("#department-dropdown").fadeOut("slow");
+      });
     </script>
 
     <main>
