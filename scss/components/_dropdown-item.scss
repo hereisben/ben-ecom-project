@@ -1,0 +1,37 @@
+@use "../base/" as base;
+@use "../utils/" as utils;
+
+%dropdownItem {
+  display: flex;
+  gap: 1.4rem;
+}
+
+%dropdownIcon {
+  height: 3.6rem;
+  width: auto;
+  color: var(--dropdown-icon-color);
+}
+
+%dropdownHeading {
+  user-select: none;
+  height: 3.6rem;
+  @extend %alignmentBox;
+  @extend %medium-sixteen-font;
+  color: var(--fifth-typo-color);
+}
+
+%dropdownList {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+%dropdownLink {
+  @extend %regular-fourteen-font;
+  color: var(--fifth-typo-color);
+  &:hover {
+    font-weight: 500;
+    color: #0071dc;
+  }
+}

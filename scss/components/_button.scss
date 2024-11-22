@@ -1,0 +1,38 @@
+@use "../base/" as base;
+@use "../utils/" as utils;
+
+%nav-btn {
+  user-select: none;
+  cursor: pointer;
+  box-shadow: var(--topbar-shadow);
+  border-radius: 0.8rem;
+  background-color: var(--second-background-color);
+
+  > img {
+    filter: var(--icon);
+  }
+
+  > span {
+    color: var(--first-typo-color);
+    @extend %medium-fifteen-font;
+  }
+}
+
+%filter-btn {
+  @extend %alignmentBox;
+  gap: 1.4rem;
+  user-select: none;
+  cursor: pointer;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+  background-color: var(--third-background-color);
+
+  .product__top-product--filter__btn--text {
+    color: var(--fourth-typo-color);
+    @extend %bold-fourteen-font;
+  }
+
+  .product__top-product--filter__btn--icon {
+    filter: var(--filter-icon);
+  }
+}

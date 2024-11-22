@@ -1,0 +1,94 @@
+@use "../utils/" as utils;
+@use "../base/" as base;
+@use "../components/" as compo;
+@use "../themes" as themes;
+
+.topbar {
+  @extend %isRelatived;
+  background-color: var(--first-background-color);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .dropdown__vector {
+    @extend %isAbsoluted;
+    left: 0rem;
+    bottom: -2.7rem;
+  }
+
+  .row {
+    @extend %alignmentBox;
+    /* Top Bar Logo */
+    .topbar__logo {
+      display: flex;
+      gap: 1.4rem;
+
+      .topbar__logo--icon {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+
+      .topbar__logo--brand {
+        @extend %alignmentBox;
+        color: var(--first-typo-color);
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 3.2rem; /* 145.455% */
+      }
+    }
+    /* Top Bar Nav */
+    .topbar__nav {
+      user-select: none;
+      margin-left: 14.4rem;
+      .topbar__nav--list {
+        @extend %alignmentBox;
+        gap: 3rem;
+        .topbar__nav--item {
+          @extend %alignmentBox;
+          gap: 0.6rem;
+
+          .topbar__nav--item-link {
+            color: var(--first-typo-color);
+            @extend %medium-fifteen-font;
+          }
+
+          .topbar__nav--item-arrow {
+            cursor: pointer;
+            transform: translateY(35%);
+            filter: var(--icon);
+          }
+        }
+      }
+    }
+
+    .right-nav-box {
+      @extend %alignmentBox;
+      margin-left: auto;
+      gap: 2rem;
+      /* Top Bar Search*/
+      .topbar__search {
+        @extend %centerAlignedBox;
+        @extend %nav-btn;
+        width: 5rem;
+        height: 5rem;
+      }
+
+      .user-nav {
+        height: 5rem;
+        padding: 1rem 2rem;
+        @extend %alignmentBox;
+        @extend %nav-btn;
+        gap: 2rem;
+        .user-nav__btn {
+          @extend %alignmentBox;
+          gap: 1rem;
+          @extend %nav-btn;
+        }
+        .user-nav__pipe {
+          width: 0.1rem;
+          height: 3rem;
+          background-color: #ededf6;
+        }
+      }
+    }
+  }
+}

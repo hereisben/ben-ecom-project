@@ -1,0 +1,34 @@
+@use "../base/" as base;
+@use "../components/" as compo;
+
+.product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  /*TOP PRODUCT*/
+  .product__top-product {
+    @extend %alignmentBox;
+    width: 100%;
+    justify-content: space-between;
+
+    .product__top-product--filter__btn {
+      @extend %filter-btn;
+    }
+  }
+
+  /*PRODUCT LIST*/
+  .product__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3rem 3rem;
+    grid-template-areas:
+      ". . . . ."
+      ". . . . .";
+    .product__item {
+      @extend %product-item;
+    }
+  }
+}

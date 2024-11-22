@@ -1,0 +1,193 @@
+@use "../themes/" as themes;
+
+body {
+  font-family: "Gordita", sans-serif;
+}
+
+%medium-weight {
+  font-weight: 500;
+}
+
+%bold-weight {
+  font-weight: 700;
+}
+
+%regular-weight {
+  font-weight: 400;
+}
+
+%fortytwo-font {
+  font-size: 4.2rem;
+  line-height: 6rem; /* 142.857% */
+}
+
+%bold-fortytwo-font {
+  @extend %fortytwo-font;
+  @extend %bold-weight;
+}
+
+%medium-fortytwo-font {
+  @extend %fortytwo-font;
+  @extend %medium-weight;
+}
+
+%thirtysix-font {
+  font-size: 3.6rem;
+}
+
+%bold-thirtysix-font {
+  @extend %thirtysix-font;
+  @extend %bold-weight;
+  line-height: 5rem;
+}
+
+%medium-thirtysix-font {
+  @extend %thirtysix-font;
+  @extend %medium-weight;
+  line-height: 5.4rem; /* 150% */
+}
+
+%thirty-font {
+  font-size: 3rem;
+  line-height: 4.4rem; /* 146.667% */
+}
+
+%bold-thirty-font {
+  @extend %thirty-font;
+  @extend %bold-weight;
+}
+
+%medium-thirty-font {
+  @extend %thirty-font;
+  @extend %medium-weight;
+}
+
+%twentysix-font {
+  font-size: 2.6rem;
+  line-height: 3.6rem; /* 138.462% */
+}
+
+%bold-twentysix-font {
+  @extend %twentysix-font;
+  @extend %bold-weight;
+}
+
+%medium-twentysix-font {
+  @extend %twentysix-font;
+  @extend %medium-weight;
+}
+
+%twentyfour-font {
+  font-size: 2.4rem;
+  line-height: 3.4rem; /* 138.462% */
+}
+
+%bold-twentyfour-font {
+  @extend %twentyfour-font;
+  @extend %bold-weight;
+}
+
+%medium-twentyfour-font {
+  @extend %twentyfour-font;
+  @extend %medium-weight;
+}
+
+%twentytwo-font {
+  font-size: 2.2rem;
+  line-height: 3.2rem; /* 138.462% */
+}
+
+%bold-twentytwo-font {
+  @extend %twentytwo-font;
+  @extend %bold-weight;
+}
+
+%medium-twentytwo-font {
+  @extend %twentyfour-font;
+  @extend %medium-weight;
+}
+
+%eightteen-font {
+  font-size: 1.8rem;
+  line-height: 2.6rem; /* 144.444% */
+}
+
+%bold-eightteen-font {
+  @extend %eightteen-font;
+  @extend %bold-weight;
+}
+
+%medium-eightteen-font {
+  @extend %eightteen-font;
+  @extend %medium-weight;
+}
+
+%regular-eightteen-font {
+  @extend %eightteen-font;
+  @extend %regular-weight;
+}
+
+%sixteen-font {
+  font-size: 1.6rem;
+  line-height: 2.4rem; /* 150% */
+}
+
+%bold-sixteen-font {
+  @extend %sixteen-font;
+  @extend %bold-weight;
+}
+
+%medium-sixteen-font {
+  @extend %sixteen-font;
+  @extend %medium-weight;
+}
+
+%regular-sixteen-font {
+  @extend %sixteen-font;
+  @extend %regular-weight;
+}
+
+%fifteen-font {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+
+%bold-fifteen-font {
+  @extend %fifteen-font;
+  @extend %bold-weight;
+}
+
+%medium-fifteen-font {
+  @extend %fifteen-font;
+  @extend %medium-weight;
+}
+
+%regular-fifteen-font {
+  @extend %fifteen-font;
+  @extend %regular-weight;
+}
+
+%fourteen-font {
+  font-size: 1.4rem;
+  line-height: 2rem; /* 142.857% */
+}
+
+%bold-fourteen-font {
+  @extend %fourteen-font;
+  @extend %bold-weight;
+}
+
+%medium-fourteen-font {
+  @extend %fourteen-font;
+  @extend %medium-weight;
+}
+
+%regular-fourteen-font {
+  @extend %fourteen-font;
+  @extend %regular-weight;
+}
+
+h3 {
+  @extend %bold-twentyfour-font;
+  color: var(--first-typo-color);
+}

@@ -1,0 +1,37 @@
+@use "../base/" as base;
+@use "../themes/" as themes;
+@use "../utils/" as utils;
+
+%categoryItem {
+  width: 41.3rem;
+  height: 15.6rem;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: var(--first-background-color);
+  @extend %alignmentBox;
+  border-radius: 1.6rem;
+
+  .category__item--thumb-background {
+    background-color: var(--second-background-color);
+    border-radius: 0.8rem;
+    .category__item--thumb-image {
+      object-fit: cover;
+    }
+  }
+
+  .category__item--info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    .category__item--info-label {
+      @extend %bold-twentytwo-font;
+      color: var(--second-typo-color);
+    }
+
+    .category__item--info-desc {
+      @extend %regular-sixteen-font;
+      color: var(--first-typo-color);
+    }
+  }
+}

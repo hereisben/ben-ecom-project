@@ -1,0 +1,18 @@
+%alignmentBox {
+  display: flex;
+  align-items: center;
+}
+
+%centerAlignedBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%isRelatived {
+  position: relative;
+}
+
+%isAbsoluted {
+  position: absolute;
+}

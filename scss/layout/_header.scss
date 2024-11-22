@@ -1,0 +1,14 @@
+@use "../utils/" as utils;
+
+body {
+  @extend %isRelatived;
+  .header {
+    position: sticky;
+    top: 0rem;
+    z-index: 9;
+    background-color: var(--first-background-color);
+    &:has(.department:hover) .department-dropdown {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+<div class="container">
+  <div class="topbar">
+    <div class="row">
+      <!-- Logo -->
+      <a href="./" class="topbar__logo">
+        <img src="./assets/icon/icon.svg" alt="" class="topbar__logo--icon" />
+        <span class="topbar__logo--brand">grocerymart</span>
+      </a>
+      <!-- Nav Bar -->
+      <nav class="topbar__nav">
+        <ul class="topbar__nav--list">
+          <li class="topbar__nav--item department">
+            <a href="#!" class="topbar__nav--item-link">Departments</a>
+            <img
+              class="topbar__nav--item-arrow"
+              src="./assets/icon/arrow-icon.svg"
+              alt=""
+            />
+          </li>
+          <li class="topbar__nav--item">
+            <a href="#!" class="topbar__nav--item-link">Grocery</a>
+            <img
+              class="topbar__nav--item-arrow"
+              src="./assets/icon/arrow-icon.svg"
+              alt=""
+            />
+          </li>
+          <li class="topbar__nav--item">
+            <a href="#!" class="topbar__nav--item-link">Beauty</a>
+            <img
+              class="topbar__nav--item-arrow"
+              src="./assets/icon/arrow-icon.svg"
+              alt=""
+            />
+          </li>
+        </ul>
+      </nav>
+
+      <div class="right-nav-box">
+        <!-- Search -->
+        <button class="topbar__search">
+          <img
+            src="./assets/icon/search-icon.svg"
+            alt="Search Icon"
+            class="topbar__search--icon"
+          />
+        </button>
+
+        <!-- User Nav -->
+        <div class="user-nav">
+          <button class="user-nav__btn">
+            <img
+              src="./assets/icon/heart-icon.svg"
+              alt=""
+              class="user-nav__btn--icon"
+            />
+            <span class="user-nav__btn--data">03</span>
+          </button>
+
+          <svg class="user-nav__pipe"></svg>
+
+          <button class="user-nav__btn">
+            <img
+              src="./assets/icon/cart-icon.svg"
+              alt=""
+              class="user-nav__btn--icon"
+            />
+            <span class="user-nav__btn--data">$65.42</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown__vector">
+      <svg
+        class="dropdown__vector--icon"
+        width="23"
+        height="17"
+        viewBox="0 0 23 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.45277 1.1122C10.253 0.0530214 11.8441 0.0530201 12.6443 1.1122L21.6591 13.0444C22.6545 14.362 21.7147 16.25 20.0633 16.25H2.03375C0.382421 16.25 -0.557459 14.362 0.437972 13.0444L9.45277 1.1122Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+  </div>
+
+  <!-- DROP DOWN -->
+  <!-- DEPARTMENT -->
+  <article class="dropdown department-dropdown">
+    <!-- MAINBOX -->
+    <div class="dropdown__box">
+      <!-- All Department -->
+      <div id="all-department" class="dropdown__box--main-box"></div>
+    </div>
+    <!-- SUBBOX -->
+    <div class="dropdown__box department-subbox">
+      <!-- COLUMN 1 -->
+      <div class="dropdown__box--sub-box">
+        <!-- TV & Video -->
+        <div id="tv-video" class="dropdown__box--sub-box__jar"></div>
+        <!-- Wearable Technology -->
+        <div id="wearable-tech" class="dropdown__box--sub-box__jar"></div>
+      </div>
+      <!-- COLUMN 2 -->
+      <div class="dropdown__box--sub-box">
+        <!-- Computer -->
+        <div id="computer" class="dropdown__box--sub-box__jar"></div>
+      </div>
+      <!-- COLUMN 3 -->
+      <div class="dropdown__box--sub-box">
+        <!-- Savings -->
+        <div id="savings" class="dropdown__box--sub-box__jar"></div>
+        <!-- Cell Phones -->
+        <div id="cell-phones" class="dropdown__box--sub-box__jar"></div>
+      </div>
+    </div>
+  </article>
+</div>

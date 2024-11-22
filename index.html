@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <title>Ben Ecommerce Project</title>
+    <!-- Load Script -->
+    <script src="./js/scripts.js"></script>
+  </head>
+  <body>
+    <header id="header" class="header"></header>
+    <script>
+      /*Load Main Header*/
+      load("#header", "./template/header.html");
+      /*Load All Department*/
+      load("#all-department", "./template/all-department.html");
+      /*Load TV & Video*/
+      load("#tv-video", "./template/tv-video.html");
+      /*Load Wearable Tech*/
+      load("#wearable-tech", "./template/wearable-tech.html");
+      /*Load Computer*/
+      load("#computer", "./template/computer.html");
+      /*Load Savings*/
+      load("#savings", "./template/savings.html");
+      /*Load Cellphones*/
+      load("#cell-phones", "./template/cell-phones.html");
+    </script>
+
+    <main>
+      <!-- SLIDE -->
+      <section id="slide">
+        <div class="container">
+          <div class="slide">
+            <img
+              src="./assets/img/slide-image.svg"
+              alt=""
+              class="slide__image"
+            />
+
+            <h2 class="slide__heading">ORDER YOUR FAVORITE COFFEE</h2>
+
+            <div class="slide__box">
+              <input
+                class="slide__box--range"
+                type="range"
+                name="order-range"
+                id="order-range"
+                min="1"
+                max="5"
+                value="1"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORY -->
+      <section id="category">
+        <div class="container">
+          <div class="category">
+            <h3 class="category__heading">Browse Categories</h3>
+
+            <div class="category__list">
+              <a href="#!" class="category__item">
+                <span class="category__item--thumb-background">
+                  <img
+                    src="./assets/img/24150.svg"
+                    alt="New Sumatra Mandeling Coffe Blend"
+                    class="category__item--thumb-image"
+                  />
+                </span>
+                <span class="category__item--info">
+                  <h4 class="category__item--info-label">$24 - $150</h4>
+                  <span class="category__item--info-desc"
+                    >New Sumatra Mandeling Coffe Blend</span
+                  >
+                </span>
+              </a>
+              <a href="#!" class="category__item">
+                <span class="category__item--thumb-background">
+                  <img
+                    src="./assets/img/37160.svg"
+                    alt="Espresso Arabica and Robusta Beans"
+                    class="category__item--thumb-image"
+                  />
+                </span>
+                <span class="category__item--info">
+                  <h4 class="category__item--info-label">$37 - $160</h4>
+                  <span class="category__item--info-desc"
+                    >Espresso Arabica and Robusta Beans</span
+                  >
+                </span>
+              </a>
+              <a href="#!" class="category__item">
+                <span class="category__item--thumb-background">
+                  <img
+                    src="./assets/img/32160.svg"
+                    alt="Lavazza Top Class Whole Bean Coffee Blend"
+                    class="category__item--thumb-image"
+                  />
+                </span>
+                <span class="category__item--info">
+                  <h4 class="category__item--info-label">$32 - $160</h4>
+                  <span class="category__item--info-desc"
+                    >Lavazza Top Class Whole Bean Coffee Blend</span
+                  >
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCT -->
+      <section id="product">
+        <div class="container">
+          <div class="product">
+            <!-- TOP PRODUCT -->
+            <div class="product__top-product">
+              <h3 class="product__top-product--heading">Total LavAzza 1320</h3>
+              <button class="product__top-product--filter__btn">
+                <span class="product__top-product--filter__btn--text"
+                  >Filter</span
+                >
+                <img
+                  src="./assets/icon/filter-icon.svg"
+                  alt="Filter icon"
+                  class="product__top-product--filter__btn--icon"
+                />
+              </button>
+            </div>
+
+            <!-- PRODUCT LIST -->
+            <div class="row row-col-md-5 product__list">
+              <!-- ITEM 1 -->
+              <a href="#!" class="product__item">
+                <div class="product__item--thumb">
+                  <img
+                    src="./assets/img/4700.svg"
+                    alt="Coffee Beans - Espresso Arabica and Robusta Beans"
+                    class="product__item--thumb__image"
+                  />
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="0001"
+                    class="product__item--thumb__checkbox"
+                  />
+                  <label for="0001" class="product__item--thumb__fav">
+                    <svg
+                      class="product__item--thumb__fav--icon"
+                      width="22"
+                      height="20"
+                      viewBox="0 0 22 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="product__item--thumb__fav--icon__outline"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.87187 9.59832C0.798865 6.24832 2.05287 2.41932 5.56987 1.28632C7.41987 0.689322 9.46187 1.04132 10.9999 2.19832C12.4549 1.07332 14.5719 0.693322 16.4199 1.28632C19.9369 2.41932 21.1989 6.24832 20.1269 9.59832C18.4569 14.9083 10.9999 18.9983 10.9999 18.9983C10.9999 18.9983 3.59787 14.9703 1.87187 9.59832Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        class="product__item--thumb__fav--icon__inline"
+                        d="M15 4.69922C16.07 5.04522 16.826 6.00022 16.917 7.12122"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <div class="product__item--info">
+                  <span class="product__item--info__label"
+                    >Coffee Beans - Espresso Arabica and Robusta Beans</span
+                  >
+                  <span class="product__item--info__category">Lavazza</span>
+                  <div class="product__item--info__detail">
+                    <span class="product__item--info__detail--price"
+                      >$47.00</span
+                    >
+                    <img
+                      src="./assets/icon/star-icon.svg"
+                      alt="Star Icon"
+                      class="product__item--info__detail--star"
+                    />
+                    <span class="product__item--info__detail--rate">4.3</span>
+                  </div>
+                </div>
+              </a>
+              <!-- ITEM 2 -->
+              <a href="#!" class="product__item">
+                <div class="product__item--thumb">
+                  <img
+                    src="./assets/img/5300.svg"
+                    alt="Lavazza Coffee Blends - Try the Italian Espresso"
+                    class="product__item--thumb__image"
+                  />
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="0002"
+                    class="product__item--thumb__checkbox"
+                  />
+                  <label for="0002" class="product__item--thumb__fav">
+                    <svg
+                      class="product__item--thumb__fav--icon"
+                      width="22"
+                      height="20"
+                      viewBox="0 0 22 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="product__item--thumb__fav--icon__outline"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.87187 9.59832C0.798865 6.24832 2.05287 2.41932 5.56987 1.28632C7.41987 0.689322 9.46187 1.04132 10.9999 2.19832C12.4549 1.07332 14.5719 0.693322 16.4199 1.28632C19.9369 2.41932 21.1989 6.24832 20.1269 9.59832C18.4569 14.9083 10.9999 18.9983 10.9999 18.9983C10.9999 18.9983 3.59787 14.9703 1.87187 9.59832Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        class="product__item--thumb__fav--icon__inline"
+                        d="M15 4.69922C16.07 5.04522 16.826 6.00022 16.917 7.12122"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <div class="product__item--info">
+                  <span class="product__item--info__label"
+                    >Lavazza Coffee Blends - Try the Italian Espresso</span
+                  >
+                  <span class="product__item--info__category">Lavazza</span>
+                  <div class="product__item--info__detail">
+                    <span class="product__item--info__detail--price"
+                      >$53.00</span
+                    >
+                    <img
+                      src="./assets/icon/star-icon.svg"
+                      alt="Star Icon"
+                      class="product__item--info__detail--star"
+                    />
+                    <span class="product__item--info__detail--rate">3.4</span>
+                  </div>
+                </div>
+              </a>
+              <!-- ITEM 3 -->
+              <a href="#!" class="product__item">
+                <div class="product__item--thumb">
+                  <img
+                    src="./assets/img/9999.svg"
+                    alt="Lavazza - Caffè Espresso Black Tin - Ground coffee"
+                    class="product__item--thumb__image"
+                  />
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="0003"
+                    class="product__item--thumb__checkbox"
+                  />
+                  <label for="0003" class="product__item--thumb__fav">
+                    <svg
+                      class="product__item--thumb__fav--icon"
+                      width="22"
+                      height="20"
+                      viewBox="0 0 22 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="product__item--thumb__fav--icon__outline"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.87187 9.59832C0.798865 6.24832 2.05287 2.41932 5.56987 1.28632C7.41987 0.689322 9.46187 1.04132 10.9999 2.19832C12.4549 1.07332 14.5719 0.693322 16.4199 1.28632C19.9369 2.41932 21.1989 6.24832 20.1269 9.59832C18.4569 14.9083 10.9999 18.9983 10.9999 18.9983C10.9999 18.9983 3.59787 14.9703 1.87187 9.59832Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        class="product__item--thumb__fav--icon__inline"
+                        d="M15 4.69922C16.07 5.04522 16.826 6.00022 16.917 7.12122"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <div class="product__item--info">
+                  <span class="product__item--info__label"
+                    >Lavazza - Caffè Espresso Black Tin - Ground coffee</span
+                  >
+                  <span class="product__item--info__category"
+                    >welikecoffee</span
+                  >
+                  <div class="product__item--info__detail">
+                    <span class="product__item--info__detail--price"
+                      >$99.99</span
+                    >
+                    <img
+                      src="./assets/icon/star-icon.svg"
+                      alt="Star Icon"
+                      class="product__item--info__detail--star"
+                    />
+                    <span class="product__item--info__detail--rate">5.0</span>
+                  </div>
+                </div>
+              </a>
+              <!-- ITEM 4 -->
+              <a href="#!" class="product__item">
+                <div class="product__item--thumb">
+                  <img
+                    src="./assets/img/3865.svg"
+                    alt="Qualità Oro Mountain Grown - Espresso Coffee Beans"
+                    class="product__item--thumb__image"
+                  />
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="0004"
+                    class="product__item--thumb__checkbox"
+                  />
+                  <label for="0004" class="product__item--thumb__fav">
+                    <svg
+                      class="product__item--thumb__fav--icon"
+                      width="22"
+                      height="20"
+                      viewBox="0 0 22 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="product__item--thumb__fav--icon__outline"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.87187 9.59832C0.798865 6.24832 2.05287 2.41932 5.56987 1.28632C7.41987 0.689322 9.46187 1.04132 10.9999 2.19832C12.4549 1.07332 14.5719 0.693322 16.4199 1.28632C19.9369 2.41932 21.1989 6.24832 20.1269 9.59832C18.4569 14.9083 10.9999 18.9983 10.9999 18.9983C10.9999 18.9983 3.59787 14.9703 1.87187 9.59832Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        class="product__item--thumb__fav--icon__inline"
+                        d="M15 4.69922C16.07 5.04522 16.826 6.00022 16.917 7.12122"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <div class="product__item--info">
+                  <span class="product__item--info__label"
+                    >Qualità Oro Mountain Grown - Espresso Coffee Beans</span
+                  >
+                  <span class="product__item--info__category">Lavazza</span>
+                  <div class="product__item--info__detail">
+                    <span class="product__item--info__detail--price"
+                      >$38.65</span
+                    >
+                    <img
+                      src="./assets/icon/star-icon.svg"
+                      alt="Star Icon"
+                      class="product__item--info__detail--star"
+                    />
+                    <span class="product__item--info__detail--rate">4.4</span>
+                  </div>
+                </div>
+              </a>
+              <!-- ITEM 5 -->
+              <a href="#!" class="product__item">
+                <div class="product__item--thumb">
+                  <img
+                    src="./assets/img/4700.svg"
+                    alt="Coffee Beans - Espresso Arabica and Robusta Beans"
+                    class="product__item--thumb__image"
+                  />
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="0005"
+                    class="product__item--thumb__checkbox"
+                  />
+                  <label for="0005" class="product__item--thumb__fav">
+                    <svg
+                      class="product__item--thumb__fav--icon"
+                      width="22"
+                      height="20"
+                      viewBox="0 0 22 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="product__item--thumb__fav--icon__outline"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.87187 9.59832C0.798865 6.24832 2.05287 2.41932 5.56987 1.28632C7.41987 0.689322 9.46187 1.04132 10.9999 2.19832C12.4549 1.07332 14.5719 0.693322 16.4199 1.28632C19.9369 2.41932 21.1989 6.24832 20.1269 9.59832C18.4569 14.9083 10.9999 18.9983 10.9999 18.9983C10.9999 18.9983 3.59787 14.9703 1.87187 9.59832Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        class="product__item--thumb__fav--icon__inline"
+                        d="M15 4.69922C16.07 5.04522 16.826 6.00022 16.917 7.12122"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <div class="product__item--info">
+                  <span class="product__item--info__label"
+                    >Coffee Beans - Espresso Arabica and Robusta Beans</span
+                  >
+                  <span class="product__item--info__category">Lavazza</span>
+                  <div class="product__item--info__detail">
+                    <span class="product__item--info__detail--price"
+                      >$47.00</span
+                    >
+                    <img
+                      src="./assets/icon/star-icon.svg"
+                      alt="Star Icon"
+                      class="product__item--info__detail--star"
+                    />
+                    <span class="product__item--info__detail--rate">4.3</span>
+                  </div>
+                </div>
+              </a>
+              <!-- ITEM 6 -->
+              <a href="#!" class="product__item">
+                <div class="product__item--thumb">
+                  <img
+                    src="./assets/img/5300.svg"
+                    alt="Lavazza Coffee Blends - Try the Italian Espresso"
+                    class="product__item--thumb__image"
+                  />
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="0006"
+                    class="product__item--thumb__checkbox"
+                  />
+                  <label for="0006" class="product__item--thumb__fav">
+                    <svg
+                      class="product__item--thumb__fav--icon"
+                      width="22"
+                      height="20"
+                      viewBox="0 0 22 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="product__item--thumb__fav--icon__outline"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.87187 9.59832C0.798865 6.24832 2.05287 2.41932 5.56987 1.28632C7.41987 0.689322 9.46187 1.04132 10.9999 2.19832C12.4549 1.07332 14.5719 0.693322 16.4199 1.28632C19.9369 2.41932 21.1989 6.24832 20.1269 9.59832C18.4569 14.9083 10.9999 18.9983 10.9999 18.9983C10.9999 18.9983 3.59787 14.9703 1.87187 9.59832Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        class="product__item--thumb__fav--icon__inline"
+                        d="M15 4.69922C16.07 5.04522 16.826 6.00022 16.917 7.12122"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <div class="product__item--info">
+                  <span class="product__item--info__label"
+                    >Lavazza Coffee Blends - Try the Italian Espresso</span
+                  >
+                  <span class="product__item--info__category">Lavazza</span>
+                  <div class="product__item--info__detail">
+                    <span class="product__item--info__detail--price"
+                      >$53.00</span
+                    >
+                    <img
+                      src="./assets/icon/star-icon.svg"
+                      alt="Star Icon"
+                      class="product__item--info__detail--star"
+                    />
+                    <span class="product__item--info__detail--rate">3.4</span>
+                  </div>
+                </div>
+              </a>
+              <!-- ITEM 7 -->
+              <a href="#!" class="product__item">
+                <div class="product__item--thumb">
+                  <img
+                    src="./assets/img/9999.svg"
+                    alt="Lavazza - Caffè Espresso Black Tin - Ground coffee"
+                    class="product__item--thumb__image"
+                  />
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="0007"
+                    class="product__item--thumb__checkbox"
+                  />
+                  <label for="0007" class="product__item--thumb__fav">
+                    <svg
+                      class="product__item--thumb__fav--icon"
+                      width="22"
+                      height="20"
+                      viewBox="0 0 22 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="product__item--thumb__fav--icon__outline"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.87187 9.59832C0.798865 6.24832 2.05287 2.41932 5.56987 1.28632C7.41987 0.689322 9.46187 1.04132 10.9999 2.19832C12.4549 1.07332 14.5719 0.693322 16.4199 1.28632C19.9369 2.41932 21.1989 6.24832 20.1269 9.59832C18.4569 14.9083 10.9999 18.9983 10.9999 18.9983C10.9999 18.9983 3.59787 14.9703 1.87187 9.59832Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        class="product__item--thumb__fav--icon__inline"
+                        d="M15 4.69922C16.07 5.04522 16.826 6.00022 16.917 7.12122"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <div class="product__item--info">
+                  <span class="product__item--info__label"
+                    >Lavazza - Caffè Espresso Black Tin - Ground coffee</span
+                  >
+                  <span class="product__item--info__category"
+                    >welikecoffee</span
+                  >
+                  <div class="product__item--info__detail">
+                    <span class="product__item--info__detail--price"
+                      >$99.99</span
+                    >
+                    <img
+                      src="./assets/icon/star-icon.svg"
+                      alt="Star Icon"
+                      class="product__item--info__detail--star"
+                    />
+                    <span class="product__item--info__detail--rate">5.0</span>
+                  </div>
+                </div>
+              </a>
+              <!-- ITEM 8 -->
+              <a href="#!" class="product__item">
+                <div class="product__item--thumb">
+                  <img
+                    src="./assets/img/3865.svg"
+                    alt="Qualità Oro Mountain Grown - Espresso Coffee Beans"
+                    class="product__item--thumb__image"
+                  />
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="0008"
+                    class="product__item--thumb__checkbox"
+                  />
+                  <label for="0008" class="product__item--thumb__fav">
+                    <svg
+                      class="product__item--thumb__fav--icon"
+                      width="22"
+                      height="20"
+                      viewBox="0 0 22 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="product__item--thumb__fav--icon__outline"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.87187 9.59832C0.798865 6.24832 2.05287 2.41932 5.56987 1.28632C7.41987 0.689322 9.46187 1.04132 10.9999 2.19832C12.4549 1.07332 14.5719 0.693322 16.4199 1.28632C19.9369 2.41932 21.1989 6.24832 20.1269 9.59832C18.4569 14.9083 10.9999 18.9983 10.9999 18.9983C10.9999 18.9983 3.59787 14.9703 1.87187 9.59832Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        class="product__item--thumb__fav--icon__inline"
+                        d="M15 4.69922C16.07 5.04522 16.826 6.00022 16.917 7.12122"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <div class="product__item--info">
+                  <span class="product__item--info__label"
+                    >Qualità Oro Mountain Grown - Espresso Coffee Beans</span
+                  >
+                  <span class="product__item--info__category">Lavazza</span>
+                  <div class="product__item--info__detail">
+                    <span class="product__item--info__detail--price"
+                      >$38.65</span
+                    >
+                    <img
+                      src="./assets/icon/star-icon.svg"
+                      alt="Star Icon"
+                      class="product__item--info__detail--star"
+                    />
+                    <span class="product__item--info__detail--rate">4.4</span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- ITEM 9 -->
+              <a href="#!" class="product__item">
+                <div class="product__item--thumb">
+                  <img
+                    src="./assets/img/9999.svg"
+                    alt="Lavazza - Caffè Espresso Black Tin - Ground coffee"
+                    class="product__item--thumb__image"
+                  />
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="0009"
+                    class="product__item--thumb__checkbox"
+                  />
+                  <label for="0009" class="product__item--thumb__fav">
+                    <svg
+                      class="product__item--thumb__fav--icon"
+                      width="22"
+                      height="20"
+                      viewBox="0 0 22 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="product__item--thumb__fav--icon__outline"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.87187 9.59832C0.798865 6.24832 2.05287 2.41932 5.56987 1.28632C7.41987 0.689322 9.46187 1.04132 10.9999 2.19832C12.4549 1.07332 14.5719 0.693322 16.4199 1.28632C19.9369 2.41932 21.1989 6.24832 20.1269 9.59832C18.4569 14.9083 10.9999 18.9983 10.9999 18.9983C10.9999 18.9983 3.59787 14.9703 1.87187 9.59832Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        class="product__item--thumb__fav--icon__inline"
+                        d="M15 4.69922C16.07 5.04522 16.826 6.00022 16.917 7.12122"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <div class="product__item--info">
+                  <span class="product__item--info__label"
+                    >Lavazza - Caffè Espresso Black Tin - Ground coffee</span
+                  >
+                  <span class="product__item--info__category"
+                    >welikecoffee</span
+                  >
+                  <div class="product__item--info__detail">
+                    <span class="product__item--info__detail--price"
+                      >$99.99</span
+                    >
+                    <img
+                      src="./assets/icon/star-icon.svg"
+                      alt="Star Icon"
+                      class="product__item--info__detail--star"
+                    />
+                    <span class="product__item--info__detail--rate">5.0</span>
+                  </div>
+                </div>
+              </a>
+              <!-- ITEM 10 -->
+              <a href="#!" class="product__item">
+                <div class="product__item--thumb">
+                  <img
+                    src="./assets/img/3865.svg"
+                    alt="Qualità Oro Mountain Grown - Espresso Coffee Beans"
+                    class="product__item--thumb__image"
+                  />
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="0010"
+                    class="product__item--thumb__checkbox"
+                  />
+                  <label for="0010" class="product__item--thumb__fav">
+                    <svg
+                      class="product__item--thumb__fav--icon"
+                      width="22"
+                      height="20"
+                      viewBox="0 0 22 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="product__item--thumb__fav--icon__outline"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.87187 9.59832C0.798865 6.24832 2.05287 2.41932 5.56987 1.28632C7.41987 0.689322 9.46187 1.04132 10.9999 2.19832C12.4549 1.07332 14.5719 0.693322 16.4199 1.28632C19.9369 2.41932 21.1989 6.24832 20.1269 9.59832C18.4569 14.9083 10.9999 18.9983 10.9999 18.9983C10.9999 18.9983 3.59787 14.9703 1.87187 9.59832Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        class="product__item--thumb__fav--icon__inline"
+                        d="M15 4.69922C16.07 5.04522 16.826 6.00022 16.917 7.12122"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <div class="product__item--info">
+                  <span class="product__item--info__label"
+                    >Qualità Oro Mountain Grown - Espresso Coffee Beans</span
+                  >
+                  <span class="product__item--info__category">Lavazza</span>
+                  <div class="product__item--info__detail">
+                    <span class="product__item--info__detail--price"
+                      >$38.65</span
+                    >
+                    <img
+                      src="./assets/icon/star-icon.svg"
+                      alt="Star Icon"
+                      class="product__item--info__detail--star"
+                    />
+                    <span class="product__item--info__detail--rate">4.4</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

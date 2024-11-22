@@ -1,0 +1,169 @@
+@use "sass:math";
+@use "sass:map";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+}
+
+.grid-layer {
+  width: 100vw;
+  position: fixed;
+  z-index: 99;
+  display: none;
+
+  .col {
+    background-clip: content-box;
+    background-color: #ff9051;
+    opacity: 0.2;
+    height: calc(100vh * 2);
+  }
+}
+
+.grid-layer-switch {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  z-index: 999;
+
+  &:checked + .grid-layer {
+    display: block;
+  }
+}
+
+$grid-columns: 12;
+$spacer: 3rem;
+
+$grid-breakpoints: (
+  xs: 100%,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+$gutters: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+%basic-padding {
+  padding-left: var(--gutter-x-spacing-value);
+  padding-right: var(--gutter-x-spacing-value);
+}
+
+%basic-container {
+  @extend %basic-padding;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--gutter-x-spacing-value));
+  margin-right: calc(-1 * var(--gutter-x-spacing-value));
+
+  &[class*="row-cols-"] > *,
+  &[class*="col-"] {
+    flex: 0 0 auto;
+  }
+}
+
+.col {
+  @extend %basic-padding;
+  flex: 1 0;
+}
+
+.container-fluid {
+  @extend %basic-container;
+}
+
+.container {
+  --gutter-x-spacing-value: calc(var(--gutter-spacing-value) * 0.5);
+  @extend %basic-container;
+}
+
+@mixin addMediaQuery($dimension, $isExtraSmallDevice: false) {
+  @if $isExtraSmallDevice {
+    @content;
+  } @else {
+    @media (min-width: $dimension) {
+      @content;
+    }
+  }
+}
+
+@mixin addRowCols($infix) {
+  @for $i from 1 through ($grid-columns * 0.5) {
+    .row-cols#{$infix}-#{$i} > * {
+      width: math.div(100%, $i);
+    }
+  }
+}
+
+@mixin addCol($infix) {
+  @for $i from 1 through $grid-columns {
+    .col#{$infix}-#{$i} {
+      width: calc(math.div(100%, $grid-columns) * $i);
+    }
+  }
+}
+
+@mixin setOffset($infix) {
+  @for $i from 0 to $grid-columns {
+    .offset#{$infix}-#{$i} {
+      margin-left: calc(math.div(100%, $grid-columns) * $i);
+    }
+  }
+}
+
+@mixin setGutter($infix) {
+  @each $i, $gutter-value in $gutters {
+    .g#{$infix}-#{$i} {
+      --gutter-spacing-value: #{$gutter-value};
+    }
+  }
+}
+
+@each $breakpoint, $dimension in $grid-breakpoints {
+  $max-width-value: map.get($container-max-widths, $breakpoint);
+  $isExtraSmallDevice: $breakpoint == xs;
+
+  @include addMediaQuery($dimension, $isExtraSmallDevice) {
+    .container {
+      max-width: $max-width-value;
+    }
+
+    // .grid-layer {
+    //   width: $dimension;
+    // }
+
+    $infix: if($isExtraSmallDevice, "", "-#{$breakpoint}");
+
+    @include addRowCols($infix);
+
+    @include addCol($infix);
+
+    @include setOffset($infix);
+
+    @include setGutter($infix);
+  }
+}

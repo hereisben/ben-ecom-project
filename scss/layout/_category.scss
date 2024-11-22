@@ -1,0 +1,16 @@
+@use "../base/" as base;
+@use "../components/" as compo;
+
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .category__list {
+    display: flex;
+    justify-content: space-between;
+    .category__item {
+      @extend %categoryItem;
+    }
+  }
+}
