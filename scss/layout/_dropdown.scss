@@ -22,10 +22,10 @@
     justify-content: space-between;
   }
   .dropdown__box {
-    display: flex;
+    // display: flex;
     justify-content: space-between;
 
-    &.department-subbox {
+    &.hover-box {
       width: 82.5rem;
     }
 

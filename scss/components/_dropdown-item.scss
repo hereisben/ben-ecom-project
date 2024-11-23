@@ -32,6 +32,6 @@
   color: var(--fifth-typo-color);
   &:hover {
     font-weight: 500;
-    color: #0071dc;
+    color: var(--dropdown-hover-color);
   }
 }

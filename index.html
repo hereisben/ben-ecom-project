@@ -38,6 +38,7 @@
       load("#dropdown-vector", "./template/dropdown-vector.html");
       /*Load All Department*/
       load("#all-department", "./template/all-department.html");
+
       /*Load TV & Video*/
       load("#tv-video", "./template/tv-video.html");
       /*Load Wearable Tech*/
@@ -48,15 +49,252 @@
       load("#savings", "./template/savings.html");
       /*Load Cellphones*/
       load("#cell-phones", "./template/cell-phones.html");
+
+      /*Load Flash Deals*/
+      load("#flash-deals", "./template/flash-deals.html");
+      /*Load Member Exclusives*/
+      load("#member-exclusives", "./template/member-exclusives.html");
+      /*Load Seasonal Specials*/
+      load("#seasonal-specials", "./template/seasonal-specials.html");
+      /*Load Trending Picks*/
+      load("#trending-picks", "./template/trending-picks.html");
+      /*Load Budget Finds*/
+      load("#budget-finds", "./template/budget-finds.html");
+
+      /*Load Womens Apparel*/
+      load("#womens-apparel", "./template/womens-apparel.html");
+      /*Load Men Apparel*/
+      load("#mens-apparel", "./template/mens-apparel.html");
+      /*Load Shoes*/
+      load("#shoes", "./template/shoes.html");
+      /*Load Accessories*/
+      load("#accessories", "./template/accessories.html");
+      /*Load Kids Clothing*/
+      load("#kids-clothing", "./template/kids-clothing.html");
+
+      /*Load Furniture*/
+      load("#furniture", "./template/furniture.html");
+      /*Load Kitchen Appliances*/
+      load("#kitchen-appliances", "./template/kitchen-appliances.html");
+      /*Load Home Decor*/
+      load("#home-decor", "./template/home-decor.html");
+      /*Load Cleaning Appliancess*/
+      load("#cleaning-appliances", "./template/cleaning-appliances.html");
+      /*Load Outdoor Living*/
+      load("#outdoor-living", "./template/outdoor-living.html");
+
+      /*Load Action Figures*/
+      load("#action-figures", "./template/action-figures.html");
+      /*Load Board Games*/
+      load("#board-games", "./template/board-games.html");
+      /*Load Video Games*/
+      load("#video-games", "./template/video-games.html");
+      /*Load Learning Toys*/
+      load("#learning-toys", "./template/learning-toys.html");
+      /*Load Outdoor Toys*/
+      load("#outdoor-toys", "./template/outdoor-toys.html");
+
+      /*Load Toolss*/
+      load("#tools", "./template/tools.html");
+      /*Load Lighting*/
+      load("#lighting", "./template/lighting.html");
+      /*Load Plumbing*/
+      load("#plumbing", "./template/plumbing.html");
+      /*Load Flooring*/
+      load("#flooring", "./template/flooring.html");
+      /*Load Painting*/
+      load("#painting", "./template/painting.html");
+
+      /*Load Clothing*/
+      load("#clothing", "./template/clothing.html");
+      /*Load Feeding*/
+      load("#feeding", "./template/feeding.html");
+      /*Load Toys*/
+      load("#toys", "./template/toys.html");
+      /*Load Gear*/
+      load("#gear", "./template/gear.html");
+      /*Load Nursery*/
+      load("#nursery", "./template/nursery.html");
+
+      /*Load Cleaning Supplies*/
+      load("#cleaning-supplies", "./template/cleaning-supplies.html");
+      /*Load Laundry*/
+      load("#laundry", "./template/laundry.html");
+      /*Load Bathroom Supplies*/
+      load("#bathroom-supplies", "./template/bathroom-supplies.html");
+      /*Load Kitchen Essentials*/
+      load("#kitchen-essentials", "./template/kitchen-essentials.html");
+      /*Load Home Organization*/
+      load("#home-organization", "./template/home-organization.html");
+
+      /*Load Skincare*/
+      load("#skincare", "./template/skincare.html");
+      /*Load Haircare*/
+      load("#haircare", "./template/haircare.html");
+      /*Load Oral Care*/
+      load("#oral-care", "./template/oral-care.html");
+      /*Load Bath & Body*/
+      load("#bath-body", "./template/bath-body.html");
+      /*Load Grooming*/
+      load("#grooming", "./template/grooming.html");
+
+      /*Load Outdoor Furniture*/
+      load("#outdoor-furniture", "./template/outdoor-furniture.html");
+      /*Load Garden Tools*/
+      load("#garden-tools", "./template/garden-tools.html");
+      /*Load Outdoor Lighting*/
+      load("#outdoor-lighting", "./template/outdoor-lighting.html");
+      /*Load Plants & Planters*/
+      load("#plants-planters", "./template/plants-planters.html");
+      /*Load Outdoor Décor*/
+      load("#outdoor-decor", "./template/outdoor-decor.html");
+
+      /*Load Fitness Equipment*/
+      load("#fitness-equipment", "./template/fitness-equipment.html");
+      /*Load Outdoor Sports*/
+      load("#outdoor-sports", "./template/outdoor-sports.html");
+      /*Load Camping Gear*/
+      load("#camping-gear", "./template/camping-gear.html");
+      /*Load Water Sports*/
+      load("#water-sports", "./template/water-sports.html");
+      /*Load Team Sports*/
+      load("#team-sports", "./template/team-sports.html");
+
+      /*Load Retail Stores*/
+      load("#retail-stores", "./template/retail-stores.html");
+      /*Load Restaurants*/
+      load("#restaurants", "./template/restaurants.html");
+      /*Load Entertainment*/
+      load("#entertainment", "./template/entertainment.html");
+      /*Load Travel & Experiences*/
+      load("#travel-experiences", "./template/travel-experiences.html");
+      /*Load Specialty Stores*/
+      load("#specialty-stores", "./template/specialty-stores.html");
+
+      /*Load Auto Parts*/
+      load("#auto-parts", "./template/auto-parts.html");
+      /*Load Tires*/
+      load("#tires", "./template/tires.html");
+      /*Load Industrial Tools*/
+      load("#industrial-tools", "./template/industrial-tools.html");
+      /*Load Car Care*/
+      load("#car-care", "./template/car-care.html");
+      /*Load Garage Equipment*/
+      load("#garage-equipment", "./template/garage-equipment.html");
+
+      /*Load Movies*/
+      load("#movies", "./template/movies.html");
+      /*Load Music*/
+      load("#music", "./template/music.html");
+      /*Load Books*/
+      load("#books", "./template/books.html");
+      /*Load TV Shows*/
+      load("#tv-shows", "./template/tv-shows.html");
+      /*Load Audiobooks*/
+      load("#audiobooks", "./template/audiobooks.html");
     </script>
 
     <!-- DROPDOWN TOGGLE -->
     <script>
+      function hideAllBoxes() {
+        $(".hover-box").hide();
+      }
+
+      /*Department*/
       $("#department-toggle").on("mouseover", function () {
+        hideAllBoxes();
         $("#department-dropdown").css("display", "flex").fadeIn("slow");
       });
       $("#department-dropdown").on("mouseleave", function () {
         $("#department-dropdown").fadeOut("slow");
+      });
+
+      /*Electronic*/
+      $("#electronic-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#electronic-box").css("display", "flex").fadeIn("slow");
+      });
+
+      /*Savings & Featured Shops*/
+      $("#savings-featured-shops-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#savings-featured-shops-box").css("display", "flex").fadeIn("slow");
+      });
+
+      /*Clothing, Shoes & Accessories*/
+      $("#clothing-shoes-accessories-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#clothing-shoes-accessories-box")
+          .css("display", "flex")
+          .fadeIn("slow");
+      });
+
+      /*Home, Furniture & Appliances*/
+      $("#home-furniture-appliances-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#home-furniture-appliances-box")
+          .css("display", "flex")
+          .fadeIn("slow");
+      });
+
+      /*Toys & Video Games*/
+      $("#toys-video-games-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#toys-video-games-box").css("display", "flex").fadeIn("slow");
+      });
+
+      /*Home Improvement*/
+      $("#home-improvement-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#home-improvement-box").css("display", "flex").fadeIn("slow");
+      });
+
+      /*Baby*/
+      $("#baby-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#baby-box").css("display", "flex").fadeIn("slow");
+      });
+
+      /*Household Essentials*/
+      $("#household-essentials-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#household-essentials-box").css("display", "flex").fadeIn("slow");
+      });
+
+      /*Personal Care*/
+      $("#personal-care-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#personal-care-box").css("display", "flex").fadeIn("slow");
+      });
+
+      /*Patio & Garden*/
+      $("#patio-garden-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#patio-garden-box").css("display", "flex").fadeIn("slow");
+      });
+
+      /*Sports & Outdoors*/
+      $("#sports-outdoors-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#sports-outdoors-box").css("display", "flex").fadeIn("slow");
+      });
+
+      /*Gift Cards*/
+      $("#gift-cards-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#gift-cards-box").css("display", "flex").fadeIn("slow");
+      });
+
+      /*Auto, Tires and Industrial*/
+      $("#auto-tires-industrial-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#auto-tires-industrial-box").css("display", "flex").fadeIn("slow");
+      });
+
+      /*Movies, Music & Books*/
+      $("#movies-music-books-toggle").on("mouseover", function () {
+        hideAllBoxes();
+        $("#movies-music-books-box").css("display", "flex").fadeIn("slow");
       });
     </script>
 
