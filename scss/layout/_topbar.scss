@@ -10,10 +10,14 @@
   padding-bottom: 3rem;
   .dropdown__vector {
     @extend %isAbsoluted;
-    bottom: -3.2rem;
+    width: 3.01rem;
+    height: 2.3rem;
+    display: none;
+    bottom: -3.3rem;
     z-index: 9;
     color: var(--second-background-color);
     filter: drop-shadow();
+    // transform: translateX(-50%);
     .dropdown__vector--icon {
     }
   }
@@ -23,7 +27,9 @@
     /* Top Bar Logo */
     .topbar__logo {
       display: flex;
-      gap: 1.4rem;
+      justify-content: space-between;
+      width: 19rem;
+      height: 3.2rem;
 
       .topbar__logo--icon {
         width: 3.2rem;

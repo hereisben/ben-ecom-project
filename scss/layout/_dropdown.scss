@@ -8,11 +8,14 @@
   z-index: 9;
   top: 13.4rem;
   left: auto;
-  width: 124rem;
+  // width: 124rem;
+  width: 86.11vw;
+  max-width: 124rem;
   height: 58.2rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
   padding-left: 3rem;
+
   background-color: var(--second-background-color);
   border-radius: 2rem;
   box-shadow: var(--dropdown-box-shadow);
@@ -21,6 +24,15 @@
     padding-right: 6.1rem;
     justify-content: space-between;
   }
+
+  &#grocery-dropdown,
+  &#beauty-dropdown {
+    padding-right: 7.4rem;
+    .dropdown__box {
+      display: flex;
+    }
+  }
+
   .dropdown__box {
     // display: flex;
     justify-content: space-between;
@@ -73,6 +85,23 @@
             }
           }
         }
+      }
+    }
+  }
+
+  &#department-dropdown {
+    .dropdown__box {
+      .dropdown__box--sub-box {
+        width: calc(100% / 3);
+      }
+    }
+  }
+
+  &#grocery-dropdown,
+  &#beauty-dropdown {
+    .dropdown__box {
+      .dropdown__box--sub-box {
+        width: calc(100% / 4);
       }
     }
   }
