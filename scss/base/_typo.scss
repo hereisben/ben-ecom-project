@@ -191,3 +191,186 @@ h3 {
   @extend %bold-twentyfour-font;
   color: var(--first-typo-color);
 }
+
+@mixin medium-weight {
+  font-weight: 500;
+}
+
+@mixin bold-weight {
+  font-weight: 700;
+}
+
+@mixin regular-weight {
+  font-weight: 400;
+}
+
+@mixin fortytwo-font {
+  font-size: 4.2rem;
+  line-height: 6rem;
+}
+
+@mixin bold-fortytwo-font {
+  @include fortytwo-font;
+  @include bold-weight;
+}
+
+@mixin medium-fortytwo-font {
+  @include fortytwo-font;
+  @include medium-weight;
+}
+
+@mixin thirtysix-font {
+  font-size: 3.6rem;
+}
+
+@mixin bold-thirtysix-font {
+  @include thirtysix-font;
+  @include bold-weight;
+  line-height: 5rem;
+}
+
+@mixin medium-thirtysix-font {
+  @include thirtysix-font;
+  @include medium-weight;
+  line-height: 5.4rem;
+}
+
+@mixin thirty-font {
+  font-size: 3rem;
+  line-height: 4.4rem;
+}
+
+@mixin bold-thirty-font {
+  @include thirty-font;
+  @include bold-weight;
+}
+
+@mixin medium-thirty-font {
+  @include thirty-font;
+  @include medium-weight;
+}
+
+@mixin twentysix-font {
+  font-size: 2.6rem;
+  line-height: 3.6rem;
+}
+
+@mixin bold-twentysix-font {
+  @include twentysix-font;
+  @include bold-weight;
+}
+
+@mixin medium-twentysix-font {
+  @include twentysix-font;
+  @include medium-weight;
+}
+
+@mixin twentyfour-font {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+
+@mixin bold-twentyfour-font {
+  @include twentyfour-font;
+  @include bold-weight;
+}
+
+@mixin medium-twentyfour-font {
+  @include twentyfour-font;
+  @include medium-weight;
+}
+
+@mixin twentytwo-font {
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+}
+
+@mixin bold-twentytwo-font {
+  @include twentytwo-font;
+  @include bold-weight;
+}
+
+@mixin medium-twentytwo-font {
+  @include twentyfour-font;
+  @include medium-weight;
+}
+
+@mixin eightteen-font {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+}
+
+@mixin bold-eightteen-font {
+  @include eightteen-font;
+  @include bold-weight;
+}
+
+@mixin medium-eightteen-font {
+  @include eightteen-font;
+  @include medium-weight;
+}
+
+@mixin regular-eightteen-font {
+  @include eightteen-font;
+  @include regular-weight;
+}
+
+@mixin sixteen-font {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+@mixin bold-sixteen-font {
+  @include sixteen-font;
+  @include bold-weight;
+}
+
+@mixin medium-sixteen-font {
+  @include sixteen-font;
+  @include medium-weight;
+}
+
+@mixin regular-sixteen-font {
+  @include sixteen-font;
+  @include regular-weight;
+}
+
+@mixin fifteen-font {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+
+@mixin bold-fifteen-font {
+  @include fifteen-font;
+  @include bold-weight;
+}
+
+@mixin medium-fifteen-font {
+  @include fifteen-font;
+  @include medium-weight;
+}
+
+@mixin regular-fifteen-font {
+  @include fifteen-font;
+  @include regular-weight;
+}
+
+@mixin fourteen-font {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+@mixin bold-fourteen-font {
+  @include fourteen-font;
+  @include bold-weight;
+}
+
+@mixin medium-fourteen-font {
+  @include fourteen-font;
+  @include medium-weight;
+}
+
+@mixin regular-fourteen-font {
+  @include fourteen-font;
+  @include regular-weight;
+}

@@ -1,0 +1,8 @@
+@use "../base/" as base;
+@use "../utils/" as utils;
+
+h3 {
+  @include utils.maxScreenSize(sm) {
+    @include base.bold-twentytwo-font;
+  }
+}

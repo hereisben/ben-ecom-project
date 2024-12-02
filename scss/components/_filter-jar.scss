@@ -1,0 +1,20 @@
+@use "../base/" as base;
+@use "../themes/" as theme;
+@use "../utils/" as utils;
+
+%filter-jar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  user-select: none;
+
+  .product__filter--jar__label {
+    @extend %medium-twentytwo-font;
+    color: var(--first-typo-color);
+  }
+}
+
+%price-filter-jar {
+  // @extend %filter-jar;
+}

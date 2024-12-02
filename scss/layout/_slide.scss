@@ -2,7 +2,19 @@
 @use "../components/" as compo;
 @use "../utils/" as utils;
 
+%slideThumb {
+  user-select: none;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--slide-primary-color);
+  outline: 0.4rem solid;
+  outline-color: var(--slide-secondary-color);
+  cursor: pointer;
+}
+
 .slide {
+  user-select: none;
   @extend %isRelatived;
   padding-left: 7rem;
   height: 45.5rem;
@@ -17,6 +29,16 @@
     bottom: -0.2rem;
     width: 38.95%;
     height: 90.76%;
+
+    @include utils.maxScreenSize(md) {
+      width: 21.19rem;
+      height: 17.94rem;
+    }
+
+    @include utils.maxScreenSize(sm) {
+      width: 16.3rem;
+      height: 13.8rem;
+    }
   }
 
   .slide__heading {
@@ -24,6 +46,27 @@
     color: white;
     width: 42.1rem;
     margin-top: 6.7rem;
+
+    @include utils.maxScreenSize(lg) {
+      margin-top: 5rem;
+      width: 27.6rem;
+      font-size: 3rem;
+      line-height: 4.4rem; /* 146.667% */
+    }
+
+    @include utils.maxScreenSize(md) {
+      margin-top: 2rem;
+      width: 22.1rem;
+      font-size: 2.4rem;
+      line-height: 3.4rem; /* 138.462% */
+    }
+
+    @include utils.maxScreenSize(sm) {
+      margin-top: 2rem;
+      width: 15.1rem;
+      font-size: 1.5rem;
+      line-height: 2.2rem; /* 146.667% */
+    }
   }
 
   .slide__box {
@@ -61,5 +104,43 @@
       top: 50%;
       transform: translateY(-50%);
     }
+
+    @include utils.maxScreenSize(xxl) {
+      margin-top: 12.5rem;
+    }
+
+    @include utils.maxScreenSize(xl) {
+      margin-top: 7.5rem;
+    }
+
+    @include utils.maxScreenSize(lg) {
+      margin-top: 5.5rem;
+      width: 7.4rem;
+    }
+
+    @include utils.maxScreenSize(md) {
+      margin-top: 7rem;
+    }
+  }
+
+  @include utils.maxScreenSize(xxl) {
+    height: 39.5rem;
+  }
+
+  @include utils.maxScreenSize(xl) {
+    height: 33.5rem;
+  }
+
+  @include utils.maxScreenSize(lg) {
+    padding-left: 2rem;
+    height: 25rem;
+  }
+
+  @include utils.maxScreenSize(md) {
+    height: 19rem;
+  }
+
+  @include utils.maxScreenSize(sm) {
+    height: 16.6rem;
   }
 }

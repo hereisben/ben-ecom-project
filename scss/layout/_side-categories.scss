@@ -1,0 +1,45 @@
+@use "../base/" as base;
+@use "../components/" as compo;
+@use "../utils/" as utils;
+
+.side-categories-area {
+  display: none;
+  .side-categories {
+    flex-direction: column;
+    gap: 2rem;
+    position: sticky;
+    height: max-content;
+    top: 12rem;
+    overflow: auto;
+
+    .side-categories__heading {
+      @extend %bold-twentyfour-font;
+      color: var(--first-typo-color);
+    }
+    .side-categories__list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+
+      @include utils.maxScreenSize(sm) {
+        flex-direction: row;
+      }
+
+      .side-categories__item {
+        @extend %side-categories-item;
+      }
+    }
+
+    @include utils.maxScreenSize(xl) {
+      top: 12rem;
+    }
+
+    @include utils.maxScreenSize(md) {
+      top: 10.5rem;
+    }
+
+    @include utils.maxScreenSize(sm) {
+      position: static;
+    }
+  }
+}

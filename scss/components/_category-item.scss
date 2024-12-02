@@ -6,6 +6,7 @@
   width: 41.3rem;
   height: 15.6rem;
   padding: 2rem;
+  padding-right: 3.3rem;
   gap: 2rem;
   background-color: var(--first-background-color);
   @extend %alignmentBox;
@@ -14,7 +15,12 @@
   .category__item--thumb-background {
     background-color: var(--second-background-color);
     border-radius: 0.8rem;
+    width: 11.6rem;
+    height: 11.6rem;
+
     .category__item--thumb-image {
+      width: 11.6rem;
+      height: 11.6rem;
       object-fit: cover;
     }
   }

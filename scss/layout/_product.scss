@@ -1,7 +1,9 @@
 @use "../base/" as base;
 @use "../components/" as compo;
+@use "../utils" as utils;
 
 .product {
+  @extend %isRelatived;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,20 +15,305 @@
     width: 100%;
     justify-content: space-between;
 
+    .product__top-product--heading {
+      @include utils.maxScreenSize(md) {
+        @include base.bold-twentytwo-font;
+      }
+    }
+
     .product__top-product--filter__btn {
       @extend %filter-btn;
     }
   }
 
+  .product__filter {
+    @extend %isAbsoluted;
+    top: 5.5rem;
+    right: 0rem;
+    width: 100%;
+    max-width: 106rem;
+    z-index: 9;
+
+    padding: 3.1rem 3rem;
+    background-color: var(--second-background-color);
+    box-shadow: var(--product-filter-box-shadow);
+    border-radius: 2rem;
+    .product__filter--heading {
+      display: block;
+      @extend %medium-twentytwo-font;
+      color: var(--first-typo-color);
+    }
+
+    .product__filter--box {
+      user-select: none;
+      width: 100%;
+      height: 16.2rem;
+      display: flex;
+      margin-top: 3rem;
+      gap: 3rem;
+      .product__filter--jar {
+        @extend %filter-jar;
+        &.product__filter--price-jar {
+          max-width: 27.2rem;
+          .product__filter--price-jar__slider {
+            @extend %isRelatived;
+            width: 100%;
+            height: 2.2rem;
+            background-image: linear-gradient(
+              to bottom,
+              var(--second-background-color) 0rem,
+              var(--second-background-color) 1rem,
+              var(--product-line-color) 1rem,
+              var(--product-line-color) 1.2rem,
+              var(--second-background-color) 1.2rem,
+              var(--second-background-color) 2.2rem
+            );
+
+            .product__filter--price-jar__slider--input {
+              @extend %isAbsoluted;
+              appearance: none;
+              background: none;
+              pointer-events: none;
+              width: 100%;
+              height: 2.2rem;
+              &::-webkit-slider-thumb {
+                @extend %price-slide-thumb;
+              }
+            }
+          }
+
+          .product__filter--price-jar__limits {
+            @extend %alignmentBox;
+            gap: 3rem;
+            .product__filter--price-jar__limits--field {
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              width: 100%;
+              height: auto;
+
+              .product__filter--price-jar__limits--field__label {
+                @extend %medium-fourteen-font;
+                color: var(--first-typo-color);
+              }
+
+              .product__filter--price-jar__limits--field__input {
+                @extend %isRelatived;
+
+                &::before {
+                  @extend %isAbsoluted;
+                  content: "$";
+                  @extend %medium-fourteen-font;
+                  color: var(--first-typo-color);
+                  height: 100%;
+                  @extend %centerAlignedBox;
+                  left: 1.2rem;
+                }
+
+                .product__filter--price-jar__limits--field__input--value {
+                  padding: 0.8rem 1.2rem;
+                  width: 100%;
+                  background-color: var(--second-background-color);
+                  outline: none;
+                  border-radius: 0.6rem;
+                  border: 1px solid var(--product-line-color);
+                  @extend %medium-fourteen-font;
+                  color: var(--first-typo-color);
+                  text-indent: 0.835rem;
+
+                  &::-webkit-outer-spin-button,
+                  &::-webkit-inner-spin-button {
+                    appearance: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.product__filter--size-weight-jar {
+          max-width: 27.2rem;
+          .product__filter--sw-jar__box {
+            @extend %alignmentBox;
+
+            &.product__filter--sw-jar__list-box {
+              gap: 1.4rem;
+              padding: 0.5rem 1.4rem;
+              border-radius: 0.6rem;
+              border: 1px solid var(--product-line-color);
+
+              .product__filter--sw-jar__list-box--field {
+                @extend %isRelatived;
+                height: 3.5rem;
+                background: none;
+                @extend %alignmentBox;
+                .product__filter--sw-jar__list-box--field__select {
+                  outline: none;
+                  width: 100%;
+                  height: 100%;
+                  @extend %medium-fourteen-font;
+                  color: var(--first-typo-color);
+                  background: none;
+
+                  background-repeat: no-repeat;
+                  background-size: 100% 100%;
+                  // padding-right: 1.7rem;
+                  appearance: none;
+
+                  &.product__filter--sw-jar__list-box--size-field__select {
+                    background-image: var(--size-field-select-background);
+
+                    option {
+                      display: none;
+                    }
+                  }
+
+                  &.product__filter--sw-jar__list-box--weight-field__select {
+                    background-image: var(--weight-field-select-background);
+                  }
+
+                  option {
+                    @extend %medium-fourteen-font;
+                    color: var(--first-typo-color);
+                    background-color: var(--second-background-color);
+                  }
+                }
+
+                &.product__filter--sw-jar__list-box--size-field {
+                  width: 12.9rem;
+                }
+
+                &.product__filter--sw-jar__list-box--weight-field {
+                  width: 8.3rem;
+                }
+              }
+
+              .product__filter--separator {
+                width: 0.1rem;
+                height: 100%;
+                background-color: var(--product-separator-color);
+              }
+
+              &:has(
+                  .product__filter--sw-jar__list-box--weight-field
+                    .product__filter--sw-jar__list-box--weight-field__select
+                    .gram-choice:checked
+                )
+                .product__filter--sw-jar__list-box--size-field
+                .product__filter--sw-jar__list-box--size-field__select
+                .gram-option {
+                display: block;
+              }
+
+              &:has(
+                  .product__filter--sw-jar__list-box--weight-field
+                    .product__filter--sw-jar__list-box--weight-field__select
+                    .pound-choice:checked
+                )
+                .product__filter--sw-jar__list-box--size-field
+                .product__filter--sw-jar__list-box--size-field__select
+                .pound-option {
+                display: block;
+              }
+            }
+
+            &.product__filter--sw-jar__tag-box {
+              @extend %tagItem;
+            }
+          }
+        }
+
+        &.product__filter--brand-jar {
+          max-width: 33.4rem;
+          .product__filter--brand-jar__search-bar {
+            @extend %alignmentBox;
+            padding: 1rem 1.6rem;
+            border-radius: 0.6rem;
+            border: 1px solid var(--product-line-color);
+            width: 100%;
+            .product__filter--brand-jar__search-bar--input {
+              outline: none;
+              background: none;
+              color: var(--first-typo-color);
+              width: 100%;
+              padding-right: 1rem;
+              @extend %medium-fifteen-font;
+
+              &::placeholder {
+                color: var(--search-input-color);
+                @extend %regular-fifteen-font;
+              }
+
+              &::-webkit-search-cancel-button {
+                display: none;
+              }
+            }
+
+            .product__filter--brand-jar__search-bar--button {
+              background: none;
+              margin-left: auto;
+              cursor: pointer;
+              .product__filter--brand-jar__search-bar--button__icon {
+                color: var(--fourth-background-color);
+              }
+            }
+          }
+
+          .product__filter--brand-jar__tag-box {
+            @extend %alignmentBox;
+            @extend %tagItem;
+          }
+        }
+      }
+
+      .product__filter--separator {
+        width: 0.1rem;
+        height: 100%;
+        background-color: var(--product-separator-color);
+      }
+    }
+
+    .product__filter--action {
+      margin-top: 1.8rem;
+      @extend %alignmentBox;
+      justify-content: right;
+      gap: 2rem;
+      .product__filter--action__button {
+        cursor: pointer;
+
+        &.product__filter--action__cancel-button {
+          background: none;
+          .product__filter--action__button--text {
+            @extend %regular-fifteen-font;
+            color: var(--search-input-color);
+          }
+        }
+
+        &.product__filter--action__result-button {
+          background-color: var(--product-filter-color);
+          padding: 0.9rem 1rem;
+          border-radius: 0.6rem;
+          .product__filter--action__button--text {
+            @extend %medium-fifteen-font;
+            color: var(--prodcut-filter-text-color);
+          }
+        }
+      }
+    }
+
+    .product__filter--glyph {
+      @extend %isAbsoluted;
+      top: -3.4rem;
+      right: -0.8rem;
+      width: 10%;
+      height: 10%;
+      fill: var(--second-background-color);
+    }
+  }
+
   /*PRODUCT LIST*/
   .product__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 3rem 3rem;
-    grid-template-areas:
-      ". . . . ."
-      ". . . . .";
+    row-gap: 3rem;
     .product__item {
       @extend %product-item;
     }

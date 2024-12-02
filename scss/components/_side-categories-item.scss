@@ -1,0 +1,47 @@
+@use "../base/" as base;
+@use "../utils/" as utils;
+@use "../themes/" as themes;
+
+%side-categories-item {
+  width: 25rem;
+  height: 5.95rem;
+  @extend %alignmentBox;
+  justify-content: space-between;
+  padding-left: 2rem;
+  background-color: var(--first-background-color);
+  border-radius: 1rem;
+  box-shadow: var(--side-categories-box-shadow);
+
+  &:hover {
+    background-color: var(--slide-primary-color);
+  }
+
+  @include utils.maxScreenSize(md) {
+    width: 19.3rem;
+  }
+
+  @include utils.maxScreenSize(sm) {
+    padding-left: 1rem;
+    width: 14.6rem;
+    height: 3.8rem;
+  }
+
+  .side-categories__item--label {
+    @extend %bold-sixteen-font;
+    color: var(--first-typo-color);
+
+    @include utils.maxScreenSize(sm) {
+      @include base.medium-fourteen-font;
+    }
+  }
+
+  .side-categories__item--image {
+    width: 7rem;
+    height: auto;
+    object-fit: cover;
+
+    @include utils.maxScreenSize(sm) {
+      width: 4.4rem;
+    }
+  }
+}

@@ -1,13 +1,15 @@
 <div class="container">
   <div class="topbar">
     <div class="row">
+      <!-- Slide Nav -->
+      <label id="slide-nav" for="" class="slide-nav hide-from-md"></label>
       <!-- Logo -->
       <a href="./" class="topbar__logo">
         <img src="./assets/icon/icon.svg" alt="" class="topbar__logo--icon" />
         <span class="topbar__logo--brand">grocerymart</span>
       </a>
       <!-- Nav Bar -->
-      <nav class="topbar__nav">
+      <nav class="topbar__nav display-from-lg">
         <ul class="topbar__nav--list">
           <li id="department-toggle" class="topbar__nav--item">
             <a href="#!" class="topbar__nav--item-link">Departments</a>
@@ -38,7 +40,7 @@
 
       <div class="right-nav-box">
         <!-- Search -->
-        <button class="topbar__search">
+        <button class="topbar__search display-from-lg">
           <img
             src="./assets/icon/search-icon.svg"
             alt="Search Icon"
@@ -47,7 +49,7 @@
         </button>
 
         <!-- User Nav -->
-        <div class="user-nav">
+        <div class="user-nav display-from-md">
           <button class="user-nav__btn">
             <img
               src="./assets/icon/heart-icon.svg"
@@ -67,6 +69,15 @@
             />
             <span class="user-nav__btn--data">$65.42</span>
           </button>
+        </div>
+
+        <!-- User Avatar -->
+        <div class="user-avatar">
+          <img
+            src="./assets/img/avatar.jpg"
+            alt="avatar"
+            class="user-avatar__image"
+          />
         </div>
       </div>
     </div>

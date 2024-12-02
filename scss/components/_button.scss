@@ -20,19 +20,42 @@
 
 %filter-btn {
   @extend %alignmentBox;
-  gap: 1.4rem;
+  justify-content: space-between;
   user-select: none;
   cursor: pointer;
   padding: 0.6rem 1.2rem;
   border-radius: 0.6rem;
   background-color: var(--third-background-color);
+  width: 10.1rem;
+  height: 3.6rem;
+
+  @include utils.maxScreenSize(md) {
+    width: 10.4rem;
+    height: 3.6rem;
+  }
 
   .product__top-product--filter__btn--text {
     color: var(--fourth-typo-color);
     @extend %bold-fourteen-font;
+
+    @include utils.maxScreenSize(sm) {
+      @include base.regular-sixteen-font;
+    }
   }
 
   .product__top-product--filter__btn--icon {
     filter: var(--filter-icon);
   }
+}
+
+%price-slide-thumb {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--second-background-color);
+  outline: 0.6rem solid;
+  outline-color: var(--product-filter-color);
+  cursor: pointer;
+  pointer-events: auto;
 }

@@ -1,0 +1,32 @@
+@use "../base/" as base;
+@use "../utils/" as utils;
+
+%tagItem {
+  gap: 2rem;
+  @extend %isRelatived;
+
+  input {
+    @extend %isAbsoluted;
+    visibility: hidden;
+
+    &:checked + div {
+      background-color: var(--product-filter-color);
+    }
+
+    &:checked + div label {
+      color: var(--checked-tag-label-color);
+    }
+  }
+
+  div {
+    border-radius: 0.6rem;
+    background-color: var(--fifth-background-color);
+    label {
+      display: block;
+      padding: 0.6rem 1.2rem;
+      cursor: pointer;
+      @extend %medium-fourteen-font;
+      color: var(--unchecked-tag-label-color);
+    }
+  }
+}

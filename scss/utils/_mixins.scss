@@ -1,0 +1,61 @@
+@use "sass:map";
+
+$device-breakpoints: (
+  xs: 0.02px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1370px,
+);
+
+@mixin displayFrom($infix, $deviceSize) {
+  .display-from-#{$infix} {
+    @if $infix != null {
+      @media (max-width: ($deviceSize - 0.02)) {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@mixin hideFrom($infix, $deviceSize) {
+  @if $infix != null {
+    .hide-from-#{$infix} {
+      @media (min-width: if($deviceSize == "xs", $deviceSize - 0.02, $deviceSize)) {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@mixin minScreenSize($deviceSize) {
+  $breakpoint: map.get($device-breakpoints, $deviceSize);
+  @if ($deviceSize) {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @error "The #{$deviceSize} is not in list.";
+  }
+}
+
+@mixin maxScreenSize($deviceSize) {
+  $breakpoint: map.get($device-breakpoints, $deviceSize);
+  @if ($deviceSize) {
+    @media (max-width: ($breakpoint - 0.02)) {
+      @content;
+    }
+  } @else {
+    @error "The #{$deviceSize} is not in list.";
+  }
+}
+
+@each $screenSize, $dimension in $device-breakpoints {
+  $infix: null;
+  @if $screenSize != "xs" {
+    $infix: $screenSize;
+  }
+  @include displayFrom($infix, $dimension);
+  @include hideFrom($infix, $dimension);
+}
