@@ -601,7 +601,11 @@
             <div class="product__top-product">
               <h3 class="product__top-product--heading">Total LavAzza 1320</h3>
 
-              <label for="" class="product__top-product--filter__btn">
+              <label
+                id="product__top-product--filter__btn"
+                for=""
+                class="product__top-product--filter__btn"
+              >
                 <span class="product__top-product--filter__btn--text"
                   >Filter</span
                 >
@@ -614,7 +618,7 @@
             </div>
 
             <!-- PRODUCT FILTER -->
-            <div class="product__filter">
+            <div id="product__filter" class="product__filter">
               <span class="product__filter--heading">Filter</span>
 
               <div class="product__filter--box">
@@ -659,7 +663,7 @@
                           type="number"
                           name=""
                           id=""
-                          class="product__filter--price-jar__limits--field__input--value product__filter--price-jar__limits--field__input--value__min"
+                          class="product__filter--price-jar__limits--field__input--value product__filter--price-jar__limits--field__input--value__min text-input"
                           value="30"
                           min="0"
                           step="1"
@@ -679,7 +683,7 @@
                           type="number"
                           name=""
                           id=""
-                          class="product__filter--price-jar__limits--field__input--value product__filter--price-jar__limits--field__input--value__max"
+                          class="product__filter--price-jar__limits--field__input--value product__filter--price-jar__limits--field__input--value__max text-input"
                           value="100"
                           max="150"
                           step="1"
@@ -804,7 +808,7 @@
 
                   <div class="product__filter--brand-jar__search-bar">
                     <input
-                      class="product__filter--brand-jar__search-bar--input"
+                      class="product__filter--brand-jar__search-bar--input text-input"
                       type="search"
                       name=""
                       id=""
@@ -891,6 +895,7 @@
 
               <div class="product__filter--action">
                 <button
+                  id="product__filter--action__cancel-button"
                   type="submit"
                   class="product__filter--action__button product__filter--action__cancel-button"
                 >
@@ -923,6 +928,10 @@
                 />
               </svg>
             </div>
+
+            <script>
+              cancelFilterButton();
+            </script>
 
             <!-- PRODUCT LIST -->
             <div
@@ -1576,8 +1585,27 @@
                 </a>
               </div>
             </div>
+
+            <!-- Update Cart -->
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                addItemToCart();
+              });
+            </script>
           </div>
         </div>
+
+        <script>
+          $(document).ready(function () {
+            $("#product__top-product--filter__btn").on("click", function () {
+              if ($("#product__filter").css("display") === "none") {
+                $("#product__filter").show();
+              } else {
+                $("#product__filter").hide();
+              }
+            });
+          });
+        </script>
       </section>
     </main>
   </body>
