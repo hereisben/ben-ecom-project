@@ -291,21 +291,21 @@
           hideSubBoxes();
           hideMegaBoxes();
           $("#department-dropdown").css("display", "flex").fadeIn("slow");
-          $("#dropdown-vector").css("left", "27.985%");
+          // $("#dropdown-vector").css("left", "27.985%");
         });
 
         /*Grocery*/
         $("#grocery-toggle").on("mouseover", function () {
           hideMegaBoxes();
           $("#grocery-dropdown").css("display", "block").fadeIn("slow");
-          $("#dropdown-vector").css("left", "37.189%");
+          // $("#dropdown-vector").css("left", "37.189%");
         });
 
         /*Beauty*/
         $("#beauty-toggle").on("mouseover", function () {
           hideMegaBoxes();
           $("#beauty-dropdown").css("display", "block").fadeIn("slow");
-          $("#dropdown-vector").css("left", "44.785%");
+          // $("#dropdown-vector").css("left", "44.785%");
         });
 
         /*Electronic*/
@@ -621,7 +621,7 @@
             <div id="product__filter" class="product__filter">
               <span class="product__filter--heading">Filter</span>
 
-              <div class="product__filter--box">
+              <div id="product__filter--box" class="product__filter--box">
                 <!-- Price Filter -->
                 <div class="product__filter--jar product__filter--price-jar">
                   <span class="product__filter--jar__label">Price</span>
@@ -929,6 +929,7 @@
               </svg>
             </div>
 
+            <!-- Hide Filter -->
             <script>
               cancelFilterButton();
             </script>

@@ -7,5 +7,38 @@ body {
     top: 0rem;
     z-index: 9;
     background-color: var(--first-background-color);
+
+    &:has(#department-dropdown[style*="display: flex"]) {
+      .dropdown__vector {
+        left: 27.985%;
+        @include utils.maxScreenSize(xxl) {
+          left: 33.385%;
+        }
+        @include utils.maxScreenSize(xl) {
+          left: 30.385%;
+        }
+      }
+    }
+
+    &:has(#grocery-dropdown[style*="display: block"]) {
+      .dropdown__vector {
+        left: 37.189%;
+        @include utils.maxScreenSize(xxl) {
+          left: 43.789%;
+        }
+        @include utils.maxScreenSize(xl) {
+          left: 42.289%;
+        }
+      }
+    }
+
+    &:has(#beauty-dropdown[style*="display: block"]) {
+      .dropdown__vector {
+        left: 44.785%;
+        @include utils.maxScreenSize(xxl) {
+          left: 52.485%;
+        }
+      }
+    }
   }
 }

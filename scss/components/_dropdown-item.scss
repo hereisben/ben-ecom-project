@@ -4,6 +4,10 @@
 %dropdownItem {
   display: flex;
   gap: 1.4rem;
+
+  @include utils.maxScreenSize(xl) {
+    gap: 1rem;
+  }
 }
 
 %dropdownIcon {

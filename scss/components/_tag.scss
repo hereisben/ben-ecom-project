@@ -2,7 +2,7 @@
 @use "../utils/" as utils;
 
 %tagItem {
-  gap: 2rem;
+  justify-content: space-between;
   @extend %isRelatived;
 
   input {
@@ -27,6 +27,10 @@
       cursor: pointer;
       @extend %medium-fourteen-font;
       color: var(--unchecked-tag-label-color);
+
+      @include utils.maxScreenSize(lg) {
+        @include base.regular-fourteen-font;
+      }
     }
   }
 }

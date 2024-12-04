@@ -2,6 +2,24 @@
 @use "../components/" as compo;
 @use "../utils" as utils;
 
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body:has(#category__checkbox:checked) {
+    #product__filter--box {
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      .product__filter--jar {
+      }
+
+      .product__filter--separator {
+        width: 100%;
+        height: 0.1rem;
+      }
+    }
+  }
+}
+
 .product {
   @extend %isRelatived;
   width: 100%;
@@ -39,6 +57,15 @@
     background-color: var(--second-background-color);
     box-shadow: var(--product-filter-box-shadow);
     border-radius: 2rem;
+
+    @include utils.maxScreenSize(xl) {
+      width: auto;
+    }
+
+    @include utils.maxScreenSize(md) {
+      max-width: 31.2rem;
+    }
+
     .product__filter--heading {
       display: block;
       @extend %medium-twentytwo-font;
@@ -48,10 +75,17 @@
     .product__filter--box {
       user-select: none;
       width: 100%;
-      height: 16.2rem;
+      height: auto;
       display: flex;
       margin-top: 3rem;
       gap: 3rem;
+
+      @include utils.maxScreenSize(lg) {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
       .product__filter--jar {
         @extend %filter-jar;
         &.product__filter--price-jar {
@@ -220,6 +254,11 @@
 
             &.product__filter--sw-jar__tag-box {
               @extend %tagItem;
+              max-width: 25.1rem;
+
+              @include utils.maxScreenSize(lg) {
+                max-width: 22.7rem;
+              }
             }
           }
         }
@@ -263,14 +302,24 @@
           .product__filter--brand-jar__tag-box {
             @extend %alignmentBox;
             @extend %tagItem;
+            max-width: 29.7rem;
+
+            @include utils.maxScreenSize(lg) {
+              max-width: 27.2rem;
+            }
           }
         }
       }
 
       .product__filter--separator {
         width: 0.1rem;
-        height: 100%;
+        height: 16.2rem;
         background-color: var(--product-separator-color);
+
+        @include utils.maxScreenSize(lg) {
+          width: 100%;
+          height: 0.1rem;
+        }
       }
     }
 

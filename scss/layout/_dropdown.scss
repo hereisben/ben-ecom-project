@@ -11,7 +11,8 @@
   // width: 124rem;
   width: 86.11vw;
   max-width: 124rem;
-  height: 58.2rem;
+  // height: 59.6rem;
+  height: 53vh;
   padding-top: 3rem;
   padding-bottom: 3rem;
   padding-left: 3rem;
@@ -22,27 +23,77 @@
 
   &.department-dropdown {
     padding-right: 6.1rem;
+    // gap: 6.1rem;
     justify-content: space-between;
+
+    @include utils.maxScreenSize(xxl) {
+      padding-right: 3rem;
+    }
   }
 
   &#grocery-dropdown,
   &#beauty-dropdown {
-    padding-right: 7.4rem;
+    padding-right: 6.2rem;
+
+    @include utils.maxScreenSize(xxl) {
+      padding-right: 3rem;
+    }
     .dropdown__box {
       display: flex;
+      height: 100%;
     }
   }
 
   .dropdown__box {
     // display: flex;
     justify-content: space-between;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      background-color: var(--second-background-color);
+    }
+
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: var(--second-background-color);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+      background-color: var(--fifth-background-color);
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background-color: var(--second-background-color);
+    }
+
+    &.all-department-dropdown-box {
+      width: calc((272 / 1240) * 100%);
+      padding-right: 1rem;
+    }
 
     &.hover-box {
-      width: 82.5rem;
+      margin-left: auto;
+      width: calc((825 / 1240) * 100%);
+
+      @include utils.maxScreenSize(xxl) {
+        width: 73.5%;
+      }
+
+      @include utils.maxScreenSize(xl) {
+        width: 76.5%;
+      }
     }
 
     .dropdown__box--main-box {
       @extend %dropdownItem;
+
+      // @include utils.maxScreenSize(xxl) {
+      //   width: 25.9rem;
+      // }
 
       .dropdown__box--main-box__icon {
         @extend %dropdownIcon;
@@ -66,6 +117,7 @@
       display: flex;
       flex-direction: column;
       gap: 3rem;
+
       .dropdown__box--sub-box__jar {
         @extend %dropdownItem;
         .dropdown__box--sub-box__jar--icon {
@@ -93,6 +145,7 @@
     .dropdown__box {
       .dropdown__box--sub-box {
         width: calc(100% / 3);
+        max-width: 22.8rem;
       }
     }
   }
