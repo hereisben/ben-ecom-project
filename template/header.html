@@ -2,7 +2,10 @@
   <div class="topbar">
     <div class="row">
       <!-- Slide Nav -->
-      <label id="slide-nav" for="" class="slide-nav hide-from-md"></label>
+      <button
+        id="slide-nav__show-btn"
+        class="slide-nav__show-btn hide-from-md"
+      ></button>
       <!-- Logo -->
       <a href="./" class="topbar__logo">
         <img src="./assets/icon/icon.svg" alt="" class="topbar__logo--icon" />
@@ -40,13 +43,27 @@
 
       <div class="right-nav-box">
         <!-- Search -->
-        <button class="topbar__search display-from-lg">
-          <img
-            src="./assets/icon/search-icon.svg"
-            alt="Search Icon"
-            class="topbar__search--icon"
+        <div class="topbar__search display-from-xl">
+          <input
+            class="topbar__search--input"
+            type="search"
+            name=""
+            id="topbar__search--input"
+            placeholder="Search for products"
           />
-        </button>
+          <button id="topbar__search--btn" class="topbar__search--btn">
+            <img
+              src="./assets/icon/search-icon.svg"
+              alt="Search Icon"
+              class="topbar__search--icon search-icon"
+            />
+            <img
+              class="topbar__search--icon cancel-icon"
+              src="./assets/icon/cancel-icon.svg"
+              alt=""
+            />
+          </button>
+        </div>
 
         <!-- User Nav -->
         <div class="user-nav display-from-md">
@@ -524,4 +541,7 @@
       </div>
     </div>
   </article>
+
+  <!-- NAV DRAWER -->
+  <nav id="slide-nav" class="slide-nav"></nav>
 </div>

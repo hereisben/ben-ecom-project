@@ -18,6 +18,14 @@ body {
           left: 30.385%;
         }
       }
+
+      &:has(.topbar__search--input[style*="display: block"]) {
+        .dropdown__vector {
+          @include utils.maxScreenSize(xxl) {
+            left: 25.5%;
+          }
+        }
+      }
     }
 
     &:has(#grocery-dropdown[style*="display: block"]) {
@@ -30,6 +38,14 @@ body {
           left: 42.289%;
         }
       }
+
+      &:has(.topbar__search--input[style*="display: block"]) {
+        .dropdown__vector {
+          @include utils.maxScreenSize(xxl) {
+            left: 35.5%;
+          }
+        }
+      }
     }
 
     &:has(#beauty-dropdown[style*="display: block"]) {
@@ -39,6 +55,24 @@ body {
           left: 52.485%;
         }
       }
+
+      &:has(.topbar__search--input[style*="display: block"]) {
+        .dropdown__vector {
+          @include utils.maxScreenSize(xxl) {
+            left: 43.5%;
+          }
+        }
+      }
+    }
+
+    .slide-nav {
+      position: fixed;
+      width: 86.66vw;
+      height: 100vh;
+      left: 0rem;
+      top: 0rem;
+      background-color: var(--second-background-color);
+      border-radius: 0rem 2rem 2rem 0rem;
     }
   }
 }

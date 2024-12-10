@@ -2,6 +2,7 @@ function load(selector, path) {
   const cached = localStorage.getItem(path);
   if (cached) {
     document.querySelector(selector).innerHTML = cached;
+    return;
   }
 
   fetch(path)
@@ -11,7 +12,8 @@ function load(selector, path) {
         document.querySelector(selector).innerHTML = html;
         localStorage.setItem(path, html);
       }
-    });
+    })
+    .catch((err) => console.error("Fetch failed:", err));
 }
 
 function updatePriceRange() {
@@ -172,5 +174,33 @@ function addItemToCart() {
       }
       itemsAdded.innerHTML = String(itemsCount).padStart(2, "0");
     });
+  });
+}
+
+function hideShowSearchBtn() {
+  const button = document.querySelector(".topbar__search--btn"),
+    searchInput = document.querySelector(".topbar__search--input"),
+    searchIcon = document.querySelector(".search-icon"),
+    cancelIcon = document.querySelector(".cancel-icon"),
+    topbarNav = document.querySelector(".topbar__nav"),
+    departmentDropdown = document.querySelector("#department-dropdown"),
+    groceryDropdown = document.querySelector("#grocery-dropdown"),
+    beautyDropdown = document.querySelector("#beauty-dropdown"),
+    dropdownVector = document.querySelector("#dropdown-vector");
+
+  button.addEventListener("click", function () {
+    if (searchInput.style.display === "block") {
+      searchInput.style.display = "none";
+      searchIcon.style.display = "block";
+      cancelIcon.style.display = "none";
+      topbarNav.style.marginLeft = "14.4rem";
+    } else {
+      searchInput.style.display = "block";
+      searchIcon.style.display = "none";
+      cancelIcon.style.display = "block";
+      if (window.innerWidth < 1399.98 && window.innerWidth >= 1200) {
+        topbarNav.style.marginLeft = "4.8rem";
+      }
+    }
   });
 }

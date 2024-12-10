@@ -34,8 +34,11 @@
     <script>
       /*Load Main Header*/
       load("#header", "./template/header.html");
-      /*Load Slide Nav Icon*/
-      load("#slide-nav", "./template/trunk/slide-nav-icon.html");
+    </script>
+
+    <script>
+      /*Active Search Bar*/
+      document.addEventListener("DOMContentLoaded", hideShowSearchBtn);
     </script>
 
     <!-- LOAD DROPDOWN VECTOR HTML -->
@@ -46,223 +49,251 @@
 
     <!-- LOAD DEPARTMENT -->
     <script>
-      /*Load All Department*/
-      load("#all-department", "./template/department/all-department.html");
+      document.addEventListener("DOMContentLoaded", function () {
+        /*Load All Department*/
+        load("#all-department", "./template/department/all-department.html");
 
-      /*Load TV & Video*/
-      load("#tv-video", "./template/department/tv-video.html");
-      /*Load Wearable Tech*/
-      load("#wearable-tech", "./template/department/wearable-tech.html");
-      /*Load Computer*/
-      load("#computer", "./template/department/computer.html");
-      /*Load Savings*/
-      load("#savings", "./template/department/savings.html");
-      /*Load Cellphones*/
-      load("#cell-phones", "./template/department/cell-phones.html");
+        /*Load TV & Video*/
+        load("#tv-video", "./template/department/tv-video.html");
+        /*Load Wearable Tech*/
+        load("#wearable-tech", "./template/department/wearable-tech.html");
+        /*Load Computer*/
+        load("#computer", "./template/department/computer.html");
+        /*Load Savings*/
+        load("#savings", "./template/department/savings.html");
+        /*Load Cellphones*/
+        load("#cell-phones", "./template/department/cell-phones.html");
 
-      /*Load Flash Deals*/
-      load("#flash-deals", "./template/department/flash-deals.html");
-      /*Load Member Exclusives*/
-      load(
-        "#member-exclusives",
-        "./template/department/member-exclusives.html"
-      );
-      /*Load Seasonal Specials*/
-      load(
-        "#seasonal-specials",
-        "./template/department/seasonal-specials.html"
-      );
-      /*Load Trending Picks*/
-      load("#trending-picks", "./template/department/trending-picks.html");
-      /*Load Budget Finds*/
-      load("#budget-finds", "./template/department/budget-finds.html");
+        /*Load Flash Deals*/
+        load("#flash-deals", "./template/department/flash-deals.html");
+        /*Load Member Exclusives*/
+        load(
+          "#member-exclusives",
+          "./template/department/member-exclusives.html"
+        );
+        /*Load Seasonal Specials*/
+        load(
+          "#seasonal-specials",
+          "./template/department/seasonal-specials.html"
+        );
+        /*Load Trending Picks*/
+        load("#trending-picks", "./template/department/trending-picks.html");
+        /*Load Budget Finds*/
+        load("#budget-finds", "./template/department/budget-finds.html");
 
-      /*Load Womens Apparel*/
-      load("#womens-apparel", "./template/department/womens-apparel.html");
-      /*Load Men Apparel*/
-      load("#mens-apparel", "./template/department/mens-apparel.html");
-      /*Load Shoes*/
-      load("#shoes", "./template/department/shoes.html");
-      /*Load Accessories*/
-      load("#accessories", "./template/department/accessories.html");
-      /*Load Kids Clothing*/
-      load("#kids-clothing", "./template/department/kids-clothing.html");
+        /*Load Womens Apparel*/
+        load("#womens-apparel", "./template/department/womens-apparel.html");
+        /*Load Men Apparel*/
+        load("#mens-apparel", "./template/department/mens-apparel.html");
+        /*Load Shoes*/
+        load("#shoes", "./template/department/shoes.html");
+        /*Load Accessories*/
+        load("#accessories", "./template/department/accessories.html");
+        /*Load Kids Clothing*/
+        load("#kids-clothing", "./template/department/kids-clothing.html");
 
-      /*Load Furniture*/
-      load("#furniture", "./template/department/furniture.html");
-      /*Load Kitchen Appliances*/
-      load(
-        "#kitchen-appliances",
-        "./template/department/kitchen-appliances.html"
-      );
-      /*Load Home Decor*/
-      load("#home-decor", "./template/department/home-decor.html");
-      /*Load Cleaning Appliancess*/
-      load(
-        "#cleaning-appliances",
-        "./template/department/cleaning-appliances.html"
-      );
-      /*Load Outdoor Living*/
-      load("#outdoor-living", "./template/department/outdoor-living.html");
+        /*Load Furniture*/
+        load("#furniture", "./template/department/furniture.html");
+        /*Load Kitchen Appliances*/
+        load(
+          "#kitchen-appliances",
+          "./template/department/kitchen-appliances.html"
+        );
+        /*Load Home Decor*/
+        load("#home-decor", "./template/department/home-decor.html");
+        /*Load Cleaning Appliancess*/
+        load(
+          "#cleaning-appliances",
+          "./template/department/cleaning-appliances.html"
+        );
+        /*Load Outdoor Living*/
+        load("#outdoor-living", "./template/department/outdoor-living.html");
 
-      /*Load Action Figures*/
-      load("#action-figures", "./template/department/action-figures.html");
-      /*Load Board Games*/
-      load("#board-games", "./template/department/board-games.html");
-      /*Load Video Games*/
-      load("#video-games", "./template/department/video-games.html");
-      /*Load Learning Toys*/
-      load("#learning-toys", "./template/department/learning-toys.html");
-      /*Load Outdoor Toys*/
-      load("#outdoor-toys", "./template/department/outdoor-toys.html");
+        /*Load Action Figures*/
+        load("#action-figures", "./template/department/action-figures.html");
+        /*Load Board Games*/
+        load("#board-games", "./template/department/board-games.html");
+        /*Load Video Games*/
+        load("#video-games", "./template/department/video-games.html");
+        /*Load Learning Toys*/
+        load("#learning-toys", "./template/department/learning-toys.html");
+        /*Load Outdoor Toys*/
+        load("#outdoor-toys", "./template/department/outdoor-toys.html");
 
-      /*Load Toolss*/
-      load("#tools", "./template/department/tools.html");
-      /*Load Lighting*/
-      load("#lighting", "./template/department/lighting.html");
-      /*Load Plumbing*/
-      load("#plumbing", "./template/department/plumbing.html");
-      /*Load Flooring*/
-      load("#flooring", "./template/department/flooring.html");
-      /*Load Painting*/
-      load("#painting", "./template/department/painting.html");
+        /*Load Toolss*/
+        load("#tools", "./template/department/tools.html");
+        /*Load Lighting*/
+        load("#lighting", "./template/department/lighting.html");
+        /*Load Plumbing*/
+        load("#plumbing", "./template/department/plumbing.html");
+        /*Load Flooring*/
+        load("#flooring", "./template/department/flooring.html");
+        /*Load Painting*/
+        load("#painting", "./template/department/painting.html");
 
-      /*Load Clothing*/
-      load("#clothing", "./template/department/clothing.html");
-      /*Load Feeding*/
-      load("#feeding", "./template/department/feeding.html");
-      /*Load Toys*/
-      load("#toys", "./template/department/toys.html");
-      /*Load Gear*/
-      load("#gear", "./template/department/gear.html");
-      /*Load Nursery*/
-      load("#nursery", "./template/department/nursery.html");
+        /*Load Clothing*/
+        load("#clothing", "./template/department/clothing.html");
+        /*Load Feeding*/
+        load("#feeding", "./template/department/feeding.html");
+        /*Load Toys*/
+        load("#toys", "./template/department/toys.html");
+        /*Load Gear*/
+        load("#gear", "./template/department/gear.html");
+        /*Load Nursery*/
+        load("#nursery", "./template/department/nursery.html");
 
-      /*Load Cleaning Supplies*/
-      load(
-        "#cleaning-supplies",
-        "./template/department/cleaning-supplies.html"
-      );
-      /*Load Laundry*/
-      load("#laundry", "./template/department/laundry.html");
-      /*Load Bathroom Supplies*/
-      load(
-        "#bathroom-supplies",
-        "./template/department/bathroom-supplies.html"
-      );
-      /*Load Kitchen Essentials*/
-      load(
-        "#kitchen-essentials",
-        "./template/department/kitchen-essentials.html"
-      );
-      /*Load Home Organization*/
-      load(
-        "#home-organization",
-        "./template/department/home-organization.html"
-      );
+        /*Load Cleaning Supplies*/
+        load(
+          "#cleaning-supplies",
+          "./template/department/cleaning-supplies.html"
+        );
+        /*Load Laundry*/
+        load("#laundry", "./template/department/laundry.html");
+        /*Load Bathroom Supplies*/
+        load(
+          "#bathroom-supplies",
+          "./template/department/bathroom-supplies.html"
+        );
+        /*Load Kitchen Essentials*/
+        load(
+          "#kitchen-essentials",
+          "./template/department/kitchen-essentials.html"
+        );
+        /*Load Home Organization*/
+        load(
+          "#home-organization",
+          "./template/department/home-organization.html"
+        );
 
-      /*Load Skincare*/
-      load("#skincare", "./template/department/skincare.html");
-      /*Load Haircare*/
-      load("#haircare", "./template/department/haircare.html");
-      /*Load Oral Care*/
-      load("#oral-care", "./template/department/oral-care.html");
-      /*Load Bath & Body*/
-      load("#bath-body", "./template/department/bath-body.html");
-      /*Load Grooming*/
-      load("#grooming", "./template/department/grooming.html");
+        /*Load Skincare*/
+        load("#skincare", "./template/department/skincare.html");
+        /*Load Haircare*/
+        load("#haircare", "./template/department/haircare.html");
+        /*Load Oral Care*/
+        load("#oral-care", "./template/department/oral-care.html");
+        /*Load Bath & Body*/
+        load("#bath-body", "./template/department/bath-body.html");
+        /*Load Grooming*/
+        load("#grooming", "./template/department/grooming.html");
 
-      /*Load Outdoor Furniture*/
-      load(
-        "#outdoor-furniture",
-        "./template/department/outdoor-furniture.html"
-      );
-      /*Load Garden Tools*/
-      load("#garden-tools", "./template/department/garden-tools.html");
-      /*Load Outdoor Lighting*/
-      load("#outdoor-lighting", "./template/department/outdoor-lighting.html");
-      /*Load Plants & Planters*/
-      load("#plants-planters", "./template/department/plants-planters.html");
-      /*Load Outdoor Décor*/
-      load("#outdoor-decor", "./template/department/outdoor-decor.html");
+        /*Load Outdoor Furniture*/
+        load(
+          "#outdoor-furniture",
+          "./template/department/outdoor-furniture.html"
+        );
+        /*Load Garden Tools*/
+        load("#garden-tools", "./template/department/garden-tools.html");
+        /*Load Outdoor Lighting*/
+        load(
+          "#outdoor-lighting",
+          "./template/department/outdoor-lighting.html"
+        );
+        /*Load Plants & Planters*/
+        load("#plants-planters", "./template/department/plants-planters.html");
+        /*Load Outdoor Décor*/
+        load("#outdoor-decor", "./template/department/outdoor-decor.html");
 
-      /*Load Fitness Equipment*/
-      load(
-        "#fitness-equipment",
-        "./template/department/fitness-equipment.html"
-      );
-      /*Load Outdoor Sports*/
-      load("#outdoor-sports", "./template/department/outdoor-sports.html");
-      /*Load Camping Gear*/
-      load("#camping-gear", "./template/department/camping-gear.html");
-      /*Load Water Sports*/
-      load("#water-sports", "./template/department/water-sports.html");
-      /*Load Team Sports*/
-      load("#team-sports", "./template/department/team-sports.html");
+        /*Load Fitness Equipment*/
+        load(
+          "#fitness-equipment",
+          "./template/department/fitness-equipment.html"
+        );
+        /*Load Outdoor Sports*/
+        load("#outdoor-sports", "./template/department/outdoor-sports.html");
+        /*Load Camping Gear*/
+        load("#camping-gear", "./template/department/camping-gear.html");
+        /*Load Water Sports*/
+        load("#water-sports", "./template/department/water-sports.html");
+        /*Load Team Sports*/
+        load("#team-sports", "./template/department/team-sports.html");
 
-      /*Load Retail Stores*/
-      load("#retail-stores", "./template/department/retail-stores.html");
-      /*Load Restaurants*/
-      load("#restaurants", "./template/department/restaurants.html");
-      /*Load Entertainment*/
-      load("#entertainment", "./template/department/entertainment.html");
-      /*Load Travel & Experiences*/
-      load(
-        "#travel-experiences",
-        "./template/department/travel-experiences.html"
-      );
-      /*Load Specialty Stores*/
-      load("#specialty-stores", "./template/department/specialty-stores.html");
+        /*Load Retail Stores*/
+        load("#retail-stores", "./template/department/retail-stores.html");
+        /*Load Restaurants*/
+        load("#restaurants", "./template/department/restaurants.html");
+        /*Load Entertainment*/
+        load("#entertainment", "./template/department/entertainment.html");
+        /*Load Travel & Experiences*/
+        load(
+          "#travel-experiences",
+          "./template/department/travel-experiences.html"
+        );
+        /*Load Specialty Stores*/
+        load(
+          "#specialty-stores",
+          "./template/department/specialty-stores.html"
+        );
 
-      /*Load Auto Parts*/
-      load("#auto-parts", "./template/department/auto-parts.html");
-      /*Load Tires*/
-      load("#tires", "./template/department/tires.html");
-      /*Load Industrial Tools*/
-      load("#industrial-tools", "./template/department/industrial-tools.html");
-      /*Load Car Care*/
-      load("#car-care", "./template/department/car-care.html");
-      /*Load Garage Equipment*/
-      load("#garage-equipment", "./template/department/garage-equipment.html");
+        /*Load Auto Parts*/
+        load("#auto-parts", "./template/department/auto-parts.html");
+        /*Load Tires*/
+        load("#tires", "./template/department/tires.html");
+        /*Load Industrial Tools*/
+        load(
+          "#industrial-tools",
+          "./template/department/industrial-tools.html"
+        );
+        /*Load Car Care*/
+        load("#car-care", "./template/department/car-care.html");
+        /*Load Garage Equipment*/
+        load(
+          "#garage-equipment",
+          "./template/department/garage-equipment.html"
+        );
 
-      /*Load Movies*/
-      load("#movies", "./template/department/movies.html");
-      /*Load Music*/
-      load("#music", "./template/department/music.html");
-      /*Load Books*/
-      load("#books", "./template/department/books.html");
-      /*Load TV Shows*/
-      load("#tv-shows", "./template/department/tv-shows.html");
-      /*Load Audiobooks*/
-      load("#audiobooks", "./template/department/audiobooks.html");
+        /*Load Movies*/
+        load("#movies", "./template/department/movies.html");
+        /*Load Music*/
+        load("#music", "./template/department/music.html");
+        /*Load Books*/
+        load("#books", "./template/department/books.html");
+        /*Load TV Shows*/
+        load("#tv-shows", "./template/department/tv-shows.html");
+        /*Load Audiobooks*/
+        load("#audiobooks", "./template/department/audiobooks.html");
+      });
     </script>
 
     <!-- LOAD GROCERY -->
     <script>
-      load("#grocery", "./template/grocery/grocery.html");
-      load("#fresh-produce", "./template/grocery/fresh-produce.html");
-      load("#bakery-bread", "./template/grocery/bakery-bread.html");
-      load("#frozen", "./template/grocery/frozen.html");
-      load("#snacks", "./template/grocery/snacks.html");
-      load("#candy", "./template/grocery/candy.html");
-      load(
-        "#cocktails-mixes-coffee",
-        "./template/grocery/cocktails-mixes-coffee.html"
-      );
-      load("#beverages", "./template/grocery/beverages.html");
+      document.addEventListener("DOMContentLoaded", function () {
+        load("#grocery", "./template/grocery/grocery.html");
+        load("#fresh-produce", "./template/grocery/fresh-produce.html");
+        load("#bakery-bread", "./template/grocery/bakery-bread.html");
+        load("#frozen", "./template/grocery/frozen.html");
+        load("#snacks", "./template/grocery/snacks.html");
+        load("#candy", "./template/grocery/candy.html");
+        load(
+          "#cocktails-mixes-coffee",
+          "./template/grocery/cocktails-mixes-coffee.html"
+        );
+        load("#beverages", "./template/grocery/beverages.html");
+      });
     </script>
 
     <!-- LOAD BEAUTY -->
     <script>
-      load("#featured-shops", "./template/beauty/featured-shops.html");
-      load("#trending-in-beauty", "./template/beauty/trending-in-beauty.html");
-      load("#featured-brands", "./template/beauty/featured-brands.html");
-      load(
-        "#communities-to-support",
-        "./template/beauty/communities-to-support.html"
-      );
-      load("#premium-beauty", "./template/beauty/premium-beauty.html");
-      load("#beauty", "./template/beauty/beauty.html");
+      document.addEventListener("DOMContentLoaded", function () {
+        load("#featured-shops", "./template/beauty/featured-shops.html");
+        load(
+          "#trending-in-beauty",
+          "./template/beauty/trending-in-beauty.html"
+        );
+        load("#featured-brands", "./template/beauty/featured-brands.html");
+        load(
+          "#communities-to-support",
+          "./template/beauty/communities-to-support.html"
+        );
+        load("#premium-beauty", "./template/beauty/premium-beauty.html");
+        load("#beauty", "./template/beauty/beauty.html");
+      });
+    </script>
+
+    <!-- LOAD SLIDE NAV -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        load("#slide-nav", "./template/slide-nav/slide-nav.html");
+      });
     </script>
 
     <!-- DROPDOWN TOGGLE -->

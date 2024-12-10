@@ -168,6 +168,7 @@ html {
   /*ITEM*/
   --product-item-box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
   --product-filter-box-shadow: 0px 40px 90px rgba(200, 200, 200, 0.4);
+  --slide-nav-box-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
   /*BACKGROUND*/
   --main-background-color: #f6f6f6;
   --first-background-color: #eeeeee;
@@ -202,6 +203,7 @@ html.dark {
   /*ITEM*/
   --product-item-box-shadow: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
   --product-filter-box-shadow: 0px 40px 90px rgba(0, 0, 0, 0.4);
+  --slide-nav-box-shadow: 0px 40px 90px 20px rgba(23, 28, 40, 0.4);
   /*BACKGROUND*/
   --main-background-color: #292e39;
   --first-background-color: #171c28;
@@ -221,7 +223,7 @@ body {
   font-family: "Gordita", sans-serif;
 }
 
-.product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input::before, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input .product__filter--price-jar__limits--field__input--value, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field .product__filter--sw-jar__list-box--field__select, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field .product__filter--sw-jar__list-box--field__select option, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__tag-box div label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__tag-box div label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text:hover, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__result-button .product__filter--action__button--text, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item .topbar__nav--item-link, .topbar .row .right-nav-box .topbar__search > span, .topbar .row .right-nav-box .user-nav > span, .topbar .row .right-nav-box .user-nav .user-nav__btn > span, .dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--heading, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, .product .product__list .product__item .product__item--info .product__item--info__label, .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--price, .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--rate, .product .product__filter .product__filter--heading, .product .product__filter .product__filter--box .product__filter--jar .product__filter--jar__label {
+.product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input::before, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input .product__filter--price-jar__limits--field__input--value, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field .product__filter--sw-jar__list-box--field__select, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field .product__filter--sw-jar__list-box--field__select option, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__tag-box div label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__tag-box div label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text:hover, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__result-button .product__filter--action__button--text, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item .topbar__nav--item-link, .topbar .row .right-nav-box .topbar__search .topbar__search--input, .topbar .row .right-nav-box .topbar__search .topbar__search--btn > span, .topbar .row .right-nav-box .user-nav > span, .topbar .row .right-nav-box .user-nav .user-nav__btn > span, .dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--heading, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, .product .product__list .product__item .product__item--info .product__item--info__label, .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--price, .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--rate, .product .product__filter .product__filter--heading, .product .product__filter .product__filter--box .product__filter--jar .product__filter--jar__label {
   font-weight: 500;
 }
 
@@ -229,7 +231,7 @@ body {
   font-weight: 700;
 }
 
-.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--list .dropdown__box--main-box__menu--list__item, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list li .dropdown__box--sub-box__jar--menu__list--item, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input::placeholder, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text, .product .product__list .product__item .product__item--info .product__item--info__category, .category .category__list .category__item .category__item--info .category__item--info-desc {
+.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--list .dropdown__box--main-box__menu--list__item, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list li .dropdown__box--sub-box__jar--menu__list--item, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input::placeholder, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text, .topbar .row .right-nav-box .topbar__search .topbar__search--input::placeholder, .product .product__list .product__item .product__item--info .product__item--info__category, .category .category__list .category__item .category__item--info .category__item--info-desc {
   font-weight: 400;
 }
 
@@ -253,7 +255,7 @@ body {
   line-height: 2.4rem; /* 150% */
 }
 
-.product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input::placeholder, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text:hover, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__result-button .product__filter--action__button--text, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item .topbar__nav--item-link, .topbar .row .right-nav-box .topbar__search > span, .topbar .row .right-nav-box .user-nav > span, .topbar .row .right-nav-box .user-nav .user-nav__btn > span {
+.product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input::placeholder, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text, .topbar .row .right-nav-box .topbar__search .topbar__search--input::placeholder, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text:hover, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__result-button .product__filter--action__button--text, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item .topbar__nav--item-link, .topbar .row .right-nav-box .topbar__search .topbar__search--input, .topbar .row .right-nav-box .topbar__search .topbar__search--btn > span, .topbar .row .right-nav-box .user-nav > span, .topbar .row .right-nav-box .user-nav .user-nav__btn > span {
   font-size: 1.5rem;
   line-height: 2.2rem;
 }
@@ -281,12 +283,12 @@ html {
   --product-filter-btn-text-color: #1a162e;
 }
 
-.product .product__top-product, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__tag-box, .product .product__filter .product__filter--action, .topbar .row, .topbar .row .topbar__logo .topbar__logo--brand, .topbar .row .topbar__nav .topbar__nav--list, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item .topbar__nav--item-link, .topbar .row .right-nav-box, .topbar .row .right-nav-box .user-nav, .topbar .row .right-nav-box .user-nav .user-nav__btn, .side-categories-area .side-categories .side-categories__list .side-categories__item, .dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--heading, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, .product .product__list .product__item .product__item--info .product__item--info__detail, .category .category__list .category__item, .product .product__top-product .product__top-product--filter__btn {
+.product .product__top-product, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__tag-box, .product .product__filter .product__filter--action, .topbar .row, .topbar .row .topbar__logo .topbar__logo--brand, .topbar .row .topbar__nav .topbar__nav--list, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item .topbar__nav--item-link, .topbar .row .right-nav-box, .topbar .row .right-nav-box .topbar__search, .topbar .row .right-nav-box .user-nav, .topbar .row .right-nav-box .user-nav .user-nav__btn, .side-categories-area .side-categories .side-categories__list .side-categories__item, .dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--heading, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, .product .product__list .product__item .product__item--info .product__item--info__detail, .category .category__list .category__item, .product .product__top-product .product__top-product--filter__btn {
   display: flex;
   align-items: center;
 }
 
-.product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input::before, .topbar .row .slide-nav, .topbar .row .right-nav-box .topbar__search, .product .product__list .product__item .product__item--thumb .product__item--thumb__fav {
+.product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input::before, .topbar .row .slide-nav__show-btn, .topbar .row .right-nav-box .topbar__search .topbar__search--btn, .product .product__list .product__item .product__item--thumb .product__item--thumb__fav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -360,17 +362,17 @@ html {
   }
 }
 
-.topbar .row .right-nav-box .topbar__search, .topbar .row .right-nav-box .user-nav, .topbar .row .right-nav-box .user-nav .user-nav__btn {
+.topbar .row .right-nav-box .topbar__search .topbar__search--btn, .topbar .row .right-nav-box .user-nav, .topbar .row .right-nav-box .user-nav .user-nav__btn {
   user-select: none;
   cursor: pointer;
   box-shadow: var(--topbar-shadow);
   border-radius: 0.8rem;
   background-color: var(--second-background-color);
 }
-.topbar .row .right-nav-box .topbar__search > img, .topbar .row .right-nav-box .user-nav > img, .topbar .row .right-nav-box .user-nav .user-nav__btn > img {
+.topbar .row .right-nav-box .topbar__search .topbar__search--btn > img, .topbar .row .right-nav-box .user-nav > img, .topbar .row .right-nav-box .user-nav .user-nav__btn > img {
   filter: var(--icon);
 }
-.topbar .row .right-nav-box .topbar__search > span, .topbar .row .right-nav-box .user-nav > span, .topbar .row .right-nav-box .user-nav .user-nav__btn > span {
+.topbar .row .right-nav-box .topbar__search .topbar__search--btn > span, .topbar .row .right-nav-box .user-nav > span, .topbar .row .right-nav-box .user-nav .user-nav__btn > span {
   color: var(--first-typo-color);
 }
 
@@ -1444,12 +1446,12 @@ body {
   /* Top Bar Logo */
   /* Top Bar Nav */
 }
-.topbar .row .slide-nav {
+.topbar .row .slide-nav__show-btn {
   cursor: pointer;
   width: 2.4rem;
   height: 2.4rem;
 }
-.topbar .row .slide-nav .slide-nav__icon {
+.topbar .row .slide-nav__show-btn .slide-nav__show-btn--icon {
   color: var(--fourth-background-color);
 }
 .topbar .row .topbar__logo {
@@ -1526,8 +1528,31 @@ body {
   }
 }
 .topbar .row .right-nav-box .topbar__search {
+  user-select: none;
+  border-radius: 0.6rem;
+  background-color: var(--second-background-color);
+  gap: 1rem;
+}
+.topbar .row .right-nav-box .topbar__search .topbar__search--input {
+  display: none;
+  outline: none;
+  background: none;
+  color: var(--first-typo-color);
+  width: auto;
+  padding-left: 1.4rem;
+}
+.topbar .row .right-nav-box .topbar__search .topbar__search--input::placeholder {
+  color: var(--search-input-color);
+}
+.topbar .row .right-nav-box .topbar__search .topbar__search--input::-webkit-search-cancel-button {
+  display: none;
+}
+.topbar .row .right-nav-box .topbar__search .topbar__search--btn {
   width: 5rem;
   height: 5rem;
+}
+.topbar .row .right-nav-box .topbar__search .topbar__search--btn .cancel-icon {
+  display: none;
 }
 .topbar .row .right-nav-box .user-nav {
   height: 5rem;
@@ -1579,6 +1604,11 @@ body .header:has(#department-dropdown[style*="display: flex"]) .dropdown__vector
     left: 30.385%;
   }
 }
+@media (max-width: 1369.98px) {
+  body .header:has(#department-dropdown[style*="display: flex"]):has(.topbar__search--input[style*="display: block"]) .dropdown__vector {
+    left: 25.5%;
+  }
+}
 body .header:has(#grocery-dropdown[style*="display: block"]) .dropdown__vector {
   left: 37.189%;
 }
@@ -1592,6 +1622,11 @@ body .header:has(#grocery-dropdown[style*="display: block"]) .dropdown__vector {
     left: 42.289%;
   }
 }
+@media (max-width: 1369.98px) {
+  body .header:has(#grocery-dropdown[style*="display: block"]):has(.topbar__search--input[style*="display: block"]) .dropdown__vector {
+    left: 35.5%;
+  }
+}
 body .header:has(#beauty-dropdown[style*="display: block"]) .dropdown__vector {
   left: 44.785%;
 }
@@ -1599,6 +1634,20 @@ body .header:has(#beauty-dropdown[style*="display: block"]) .dropdown__vector {
   body .header:has(#beauty-dropdown[style*="display: block"]) .dropdown__vector {
     left: 52.485%;
   }
+}
+@media (max-width: 1369.98px) {
+  body .header:has(#beauty-dropdown[style*="display: block"]):has(.topbar__search--input[style*="display: block"]) .dropdown__vector {
+    left: 43.5%;
+  }
+}
+body .header .slide-nav {
+  position: fixed;
+  width: 86.66vw;
+  height: 100vh;
+  left: 0rem;
+  top: 0rem;
+  background-color: var(--second-background-color);
+  border-radius: 0rem 2rem 2rem 0rem;
 }
 
 body {

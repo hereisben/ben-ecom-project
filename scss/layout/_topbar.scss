@@ -30,12 +30,12 @@
   .row {
     @extend %alignmentBox;
     /* Slide Nav */
-    .slide-nav {
+    .slide-nav__show-btn {
       cursor: pointer;
       width: 2.4rem;
       height: 2.4rem;
       @extend %centerAlignedBox;
-      .slide-nav__icon {
+      .slide-nav__show-btn--icon {
         color: var(--fourth-background-color);
       }
     }
@@ -117,12 +117,43 @@
       @include utils.maxScreenSize(md) {
         margin-left: initial;
       }
+
       /* Top Bar Search*/
+
       .topbar__search {
-        @extend %centerAlignedBox;
-        @extend %nav-btn;
-        width: 5rem;
-        height: 5rem;
+        user-select: none;
+        @extend %alignmentBox;
+        border-radius: 0.6rem;
+        background-color: var(--second-background-color);
+        gap: 1rem;
+        .topbar__search--input {
+          display: none;
+          outline: none;
+          background: none;
+          color: var(--first-typo-color);
+          width: auto;
+          @extend %medium-fifteen-font;
+
+          padding-left: 1.4rem;
+
+          &::placeholder {
+            color: var(--search-input-color);
+            @extend %regular-fifteen-font;
+          }
+
+          &::-webkit-search-cancel-button {
+            display: none;
+          }
+        }
+        .topbar__search--btn {
+          @extend %centerAlignedBox;
+          @extend %nav-btn;
+          width: 5rem;
+          height: 5rem;
+          .cancel-icon {
+            display: none;
+          }
+        }
       }
 
       .user-nav {
