@@ -146,6 +146,9 @@
       .dropdown__box--sub-box {
         width: calc(100% / 3);
         max-width: 22.8rem;
+        @include utils.maxScreenSize(xl) {
+          width: calc(100% / 3.5);
+        }
       }
     }
   }

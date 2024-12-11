@@ -1,7 +1,14 @@
 function load(selector, path) {
+  const element = document.querySelector(selector);
   const cached = localStorage.getItem(path);
+
+  if (!element) {
+    console.error(`Element with selector "${selector}" not found.`);
+    return;
+  }
+
   if (cached) {
-    document.querySelector(selector).innerHTML = cached;
+    element.innerHTML = cached;
     return;
   }
 
@@ -9,7 +16,7 @@ function load(selector, path) {
     .then((res) => res.text())
     .then((html) => {
       if (html !== cached) {
-        document.querySelector(selector).innerHTML = html;
+        element.innerHTML = html;
         localStorage.setItem(path, html);
       }
     })

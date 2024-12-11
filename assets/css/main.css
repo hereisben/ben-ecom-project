@@ -1641,6 +1641,7 @@ body .header:has(#beauty-dropdown[style*="display: block"]) .dropdown__vector {
   }
 }
 body .header .slide-nav {
+  display: none;
   position: fixed;
   width: 86.66vw;
   height: 100vh;
@@ -2321,6 +2322,11 @@ main:has(.category__checkbox:checked) .product-area {
 .dropdown#department-dropdown .dropdown__box .dropdown__box--sub-box {
   width: 33.3333333333%;
   max-width: 22.8rem;
+}
+@media (max-width: 1199.98px) {
+  .dropdown#department-dropdown .dropdown__box .dropdown__box--sub-box {
+    width: 28.5714285714%;
+  }
 }
 .dropdown#grocery-dropdown .dropdown__box .dropdown__box--sub-box, .dropdown#beauty-dropdown .dropdown__box .dropdown__box--sub-box {
   width: 25%;
