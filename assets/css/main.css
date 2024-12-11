@@ -520,6 +520,8 @@ html {
 }
 .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--star {
   margin-left: auto;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--rate {
   margin-left: 0.6rem;
