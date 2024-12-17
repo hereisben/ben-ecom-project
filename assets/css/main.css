@@ -1513,6 +1513,7 @@ body {
   cursor: pointer;
   width: 2.4rem;
   height: 2.4rem;
+  background: none;
 }
 .topbar .row .slide-nav__show-btn .slide-nav__show-btn--icon {
   color: var(--fourth-background-color);
@@ -1631,6 +1632,7 @@ body {
   background-color: #ededf6;
 }
 .topbar .row .right-nav-box .user-avatar {
+  cursor: pointer;
   width: 5rem;
   height: 5rem;
   border-radius: 0.8rem;
@@ -1704,6 +1706,7 @@ body .header:has(#beauty-dropdown[style*="display: block"]) .dropdown__vector {
   }
 }
 body .header .slide-nav {
+  display: none;
   align-items: flex-start;
   gap: 2rem;
   position: fixed;

@@ -67,7 +67,7 @@ body {
     }
 
     .slide-nav {
-      // display: none;
+      display: none;
       @extend %columnFlex;
       align-items: flex-start;
       gap: 2rem;

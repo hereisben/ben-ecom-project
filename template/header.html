@@ -548,7 +548,7 @@
   </article>
 
   <!-- NAV DRAWER -->
-  <nav id="slide-nav" class="slide-nav"></nav>
+  <nav id="slide-nav" class="slide-nav hide-from-md"></nav>
 </div>
 
 <!-- LOAD DROPDOWN VECTOR HTML -->
@@ -819,8 +819,13 @@
 
 <script>
   $(document).ready(function () {
-    $("#user-avatar").on("click", function () {
-      $("#slide-nav").show();
+    $("#slide-nav__show-btn").on("click", function () {
+      $("#slide-nav").css("display", "flex");
     });
   });
+</script>
+
+<!-- Update Cart -->
+<script>
+  document.addEventListener("DOMContentLoaded", addItemToCart());
 </script>
