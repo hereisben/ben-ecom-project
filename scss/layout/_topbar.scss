@@ -150,6 +150,8 @@
           @extend %nav-btn;
           width: 5rem;
           height: 5rem;
+          .search-icon {
+          }
           .cancel-icon {
             display: none;
           }
@@ -166,6 +168,8 @@
           @extend %alignmentBox;
           gap: 1rem;
           @extend %nav-btn;
+          .user-nav__btn--icon {
+          }
         }
         .user-nav__pipe {
           width: 0.1rem;

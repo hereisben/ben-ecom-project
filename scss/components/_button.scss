@@ -1,6 +1,11 @@
 @use "../base/" as base;
 @use "../utils/" as utils;
 
+%icon-size {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
 %nav-btn {
   user-select: none;
   cursor: pointer;

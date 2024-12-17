@@ -1,0 +1,82 @@
+<div
+  id="slide-nav-patio-garden-toggle"
+  class="slide-nav__field--nav-box__main-list__toggle"
+>
+  <span class="slide-nav__field--nav-box__main-list__toggle--text"
+    >Patio & Garden</span
+  >
+  <svg
+    class="slide-nav__field--nav-box__main-list__toggle--icon"
+    width="6"
+    height="10"
+    viewBox="0 0 6 10"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1.25 1.5L4.75 5L1.25 8.5"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</div>
+
+<div
+  id="slide-nav-patio-garden-box"
+  class="slide-nav__field--nav-box__sub-list"
+>
+  <div
+    id="slide-nav-outdoor-furniture"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-garden-tools"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-outdoor-lighting"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-plants-planters"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-outdoor-decor"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav-outdoor-furniture").load(
+      "./template/department/outdoor-furniture.html"
+    );
+    $("#slide-nav-garden-tools").load(
+      "./template/department/garden-tools.html"
+    );
+    $("#slide-nav-outdoor-lighting").load(
+      "./template/department/outdoor-lighting.html"
+    );
+    $("#slide-nav-plants-planters").load(
+      "./template/department/plants-planters.html"
+    );
+    $("#slide-nav-outdoor-decor").load(
+      "./template/department/outdoor-decor.html"
+    );
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav-patio-garden-toggle").on("click", function () {
+      if ($("#slide-nav-patio-garden-box").css("display") === "none") {
+        $("#slide-nav-patio-garden-box").css("display", "flex");
+      } else {
+        $("#slide-nav-patio-garden-box").css("display", "none");
+      }
+    });
+  });
+</script>

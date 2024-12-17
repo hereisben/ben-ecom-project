@@ -1,0 +1,72 @@
+<div
+  id="slide-nav-personal-care-toggle"
+  class="slide-nav__field--nav-box__main-list__toggle"
+>
+  <span class="slide-nav__field--nav-box__main-list__toggle--text"
+    >Personal Care</span
+  >
+  <svg
+    class="slide-nav__field--nav-box__main-list__toggle--icon"
+    width="6"
+    height="10"
+    viewBox="0 0 6 10"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1.25 1.5L4.75 5L1.25 8.5"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</div>
+
+<div
+  id="slide-nav-personal-care-box"
+  class="slide-nav__field--nav-box__sub-list"
+>
+  <div
+    id="slide-nav-skincare"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-haircare"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-oral-care"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-bath-body"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-grooming"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav-skincare").load("./template/department/skincare.html");
+    $("#slide-nav-haircare").load("./template/department/haircare.html");
+    $("#slide-nav-oral-care").load("./template/department/oral-care.html");
+    $("#slide-nav-bath-body").load("./template/department/bath-body.html");
+    $("#slide-nav-grooming").load("./template/department/grooming.html");
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav-personal-care-toggle").on("click", function () {
+      if ($("#slide-nav-personal-care-box").css("display") === "none") {
+        $("#slide-nav-personal-care-box").css("display", "flex");
+      } else {
+        $("#slide-nav-personal-care-box").css("display", "none");
+      }
+    });
+  });
+</script>

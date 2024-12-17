@@ -1,4 +1,5 @@
 @use "../utils/" as utils;
+@use "../components/" as compo;
 
 body {
   @extend %isRelatived;
@@ -66,14 +67,157 @@ body {
     }
 
     .slide-nav {
-      display: none;
+      // display: none;
+      @extend %columnFlex;
+      align-items: flex-start;
+      gap: 2rem;
       position: fixed;
       width: 86.66vw;
+      max-width: 66.5rem;
       height: 100vh;
       left: 0rem;
       top: 0rem;
+      padding: 2rem;
       background-color: var(--second-background-color);
       border-radius: 0rem 2rem 2rem 0rem;
+      @extend %scroll;
+
+      .slide-nav__hide-btn {
+        cursor: pointer;
+        background: none;
+        .slide-nav__hide-btn--icon {
+          filter: var(--slide-nav-icon);
+        }
+      }
+
+      .slide-nav__field {
+        width: 100%;
+        @extend %columnFlex;
+        gap: 2rem;
+        .slide-nav__field--counts {
+          @extend %slide-nav-counts;
+        }
+
+        &#slide-nav__menu {
+          .slide-nav__field--nav-box {
+            @extend %columnFlex;
+            gap: 2rem;
+            .slide-nav__field--nav-box__toggle {
+              @extend %slide-nav-toggle;
+              height: 2.4rem;
+              color: var(--fifth-typo-color);
+              .slide-nav__field--nav-box__toggle--label {
+                @extend %medium-sixteen-font;
+              }
+            }
+
+            .slide-nav__field--nav-box__list {
+              display: none;
+            }
+
+            &.slide-nav__department {
+              .slide-nav__field--nav-box__list {
+                flex-direction: column;
+                gap: 1.4rem;
+
+                .slide-nav__field--nav-box__main-list {
+                  @extend %columnFlex;
+                  gap: 1.4rem;
+                  .slide-nav__field--nav-box__main-list__toggle {
+                    height: 2rem;
+                    @extend %slide-nav-toggle;
+                    color: var(--fifth-typo-color);
+                    .slide-nav__field--nav-box__main-list__toggle--text {
+                      @extend %regular-fourteen-font;
+                    }
+
+                    .slide-nav__field--nav-box__main-list__toggle--icon {
+                      display: none;
+                    }
+                  }
+
+                  &:hover .slide-nav__field--nav-box__main-list__toggle--text {
+                    color: var(--dropdown-hover-color);
+                  }
+
+                  &:has(
+                      .slide-nav__field--nav-box__sub-list[style*="display: flex"]
+                    ) {
+                    .slide-nav__field--nav-box__main-list__toggle--text {
+                      color: var(--dropdown-hover-color);
+                    }
+                  }
+
+                  &:has(
+                      .slide-nav__field--nav-box__sub-list[style*="display: flex"]
+                    ) {
+                    .slide-nav__field--nav-box__main-list__toggle--icon {
+                      transform: rotate(90deg);
+                    }
+                  }
+
+                  &:hover .slide-nav__field--nav-box__main-list__toggle--icon {
+                    display: block;
+                  }
+
+                  .slide-nav__field--nav-box__sub-list {
+                    display: none;
+                    @extend %columnFlex;
+                    gap: 3rem;
+                    max-height: 52.2rem;
+                    @extend %scroll;
+                    .slide-nav__field--nav-box__sub-list--jar {
+                      @extend %dropdownItem;
+                      .dropdown__box--sub-box__jar--icon {
+                        @extend %dropdownIcon;
+                      }
+
+                      .dropdown__box--sub-box__jar--menu {
+                        .dropdown__box--sub-box__jar--menu__heading {
+                          @extend %dropdownHeading;
+                        }
+                        .dropdown__box--sub-box__jar--menu__list {
+                          @extend %dropdownList;
+                          .dropdown__box--sub-box__jar--menu__list--item {
+                            @extend %dropdownLink;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            &.slide-nav__grocery,
+            &.slide-nav__beauty {
+              .slide-nav__field--nav-box__list {
+                flex-direction: column;
+                gap: 3rem;
+                @extend %scroll;
+                max-height: 52.2rem;
+                .slide-nav__Field--nav-box__list--jar {
+                  @extend %dropdownItem;
+                  .dropdown__box--sub-box__jar--icon {
+                    @extend %dropdownIcon;
+                  }
+                  .dropdown__box--sub-box__jar--menu {
+                    .dropdown__box--sub-box__jar--menu__heading {
+                      @extend %dropdownHeading;
+                    }
+                    .dropdown__box--sub-box__jar--menu__list {
+                      @extend %dropdownList;
+                      .dropdown__box--sub-box__jar--menu__list--item {
+                        @extend %dropdownLink;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -74,7 +74,11 @@
               alt=""
               class="user-nav__btn--icon"
             />
-            <span id="user-nav__btn--data" class="user-nav__btn--data">00</span>
+            <span
+              id="user-nav__btn--data"
+              class="user-nav__btn--data favorite-items-value"
+              >00</span
+            >
           </button>
 
           <svg class="user-nav__pipe"></svg>
@@ -90,7 +94,7 @@
         </div>
 
         <!-- User Avatar -->
-        <div class="user-avatar">
+        <div id="user-avatar" class="user-avatar">
           <img
             src="./assets/img/avatar.jpg"
             alt="avatar"
@@ -555,13 +559,14 @@
   });
 </script>
 
-<!-- LOAD SLIDE NAV ICON -->
+<!-- LOAD SLIDE NAV -->
 <script>
   $(document).ready(function () {
     // Load Slide Nav Icon
     $("#slide-nav__show-btn").load(
-      "./template/trunk/slide-nav-show-btn-icon.html"
+      "./template/slide-nav/slide-nav-show-btn-icon.html"
     );
+    $("#slide-nav").load("./template/slide-nav/slide-nav.html");
   });
 </script>
 
@@ -812,7 +817,10 @@
   });
 </script>
 
-<!-- Update Cart -->
 <script>
-  document.addEventListener("DOMContentLoaded", addItemToCart());
+  $(document).ready(function () {
+    $("#user-avatar").on("click", function () {
+      $("#slide-nav").show();
+    });
+  });
 </script>

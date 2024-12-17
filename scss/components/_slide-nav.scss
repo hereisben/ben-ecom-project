@@ -1,0 +1,38 @@
+@use "../base/" as base;
+@use "../utils/" as utils;
+
+%slide-nav-counts {
+  cursor: pointer;
+  @extend %alignmentBox;
+  .slide-nav__field--counts__icon {
+    width: auto;
+    height: auto;
+    filter: var(--slide-nav-icon);
+  }
+
+  .slide-nav__field--counts__label {
+    margin-left: 1.5rem;
+  }
+
+  .slide-nav__field--counts__value {
+    margin-left: auto;
+  }
+
+  .slide-nav__field--counts__label,
+  .slide-nav__field--counts__value {
+    @extend %medium-fifteen-font;
+    color: var(--fifth-typo-color);
+  }
+}
+
+%slide-nav-toggle {
+  user-select: none;
+  @extend %alignmentBox;
+  cursor: pointer;
+  justify-content: space-between;
+
+  svg {
+    width: auto;
+    height: auto;
+  }
+}

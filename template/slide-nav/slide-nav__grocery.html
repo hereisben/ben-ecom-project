@@ -1,0 +1,87 @@
+<div id="slide-nav-grocery-toggle" class="slide-nav__field--nav-box__toggle">
+  <span class="slide-nav__field--nav-box__toggle--label">Grocery</span>
+  <svg
+    id="slide-nav-grocery-toggle-icon"
+    class="slide-nav__field--nav-box__toggle--icon"
+    width="6"
+    height="10"
+    viewBox="0 0 6 10"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1.25 1.5L4.75 5L1.25 8.5"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</div>
+<div id="slide-nav-grocery-box" class="slide-nav__field--nav-box__list">
+  <div
+    id="slide-nav__grocery--jar"
+    class="slide-nav__Field--nav-box__list--jar"
+  ></div>
+  <div
+    id="slide-nav__fresh-produce--jar"
+    class="slide-nav__Field--nav-box__list--jar"
+  ></div>
+  <div
+    id="slide-nav__bakery-bread--jar"
+    class="slide-nav__Field--nav-box__list--jar"
+  ></div>
+  <div
+    id="slide-nav__frozen--jar"
+    class="slide-nav__Field--nav-box__list--jar"
+  ></div>
+  <div
+    id="slide-nav__snacks--jar"
+    class="slide-nav__Field--nav-box__list--jar"
+  ></div>
+  <div
+    id="slide-nav__candy--jar"
+    class="slide-nav__Field--nav-box__list--jar"
+  ></div>
+  <div
+    id="slide-nav__cocktails-mixes-coffee--jar"
+    class="slide-nav__Field--nav-box__list--jar"
+  ></div>
+  <div
+    id="slide-nav__beverages--jar"
+    class="slide-nav__Field--nav-box__list--jar"
+  ></div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav__grocery--jar").load("./template/grocery/grocery.html");
+    $("#slide-nav__fresh-produce--jar").load(
+      "./template/grocery/fresh-produce.html"
+    );
+    $("#slide-nav__bakery-bread--jar").load(
+      "./template/grocery/bakery-bread.html"
+    );
+    $("#slide-nav__frozen--jar").load("./template/grocery/frozen.html");
+    $("#slide-nav__snacks--jar").load("./template/grocery/snacks.html");
+    $("#slide-nav__candy--jar").load("./template/grocery/candy.html");
+    $("#slide-nav__cocktails-mixes-coffee--jar").load(
+      "./template/grocery/cocktails-mixes-coffee.html"
+    );
+    $("#slide-nav__beverages--jar").load("./template/grocery/beverages.html");
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav-grocery-toggle").on("click", function () {
+      if ($("#slide-nav-grocery-box").css("display") === "none") {
+        $("#slide-nav-grocery-box").css("display", "flex");
+        $("#slide-nav-grocery-toggle-icon").css("transform", "rotate(90deg)");
+      } else {
+        $("#slide-nav-grocery-box").css("display", "none");
+        $("#slide-nav-grocery-toggle-icon").css("transform", "none");
+      }
+    });
+  });
+</script>

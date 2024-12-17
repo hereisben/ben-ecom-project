@@ -1,0 +1,164 @@
+<div id="slide-nav-department-toggle" class="slide-nav__field--nav-box__toggle">
+  <span class="slide-nav__field--nav-box__toggle--label">Departments</span>
+  <svg
+    id="slide-nav-department-toggle-icon"
+    class="slide-nav__field--nav-box__toggle--icon"
+    width="6"
+    height="10"
+    viewBox="0 0 6 10"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1.25 1.5L4.75 5L1.25 8.5"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</div>
+
+<div id="slide-nav-department-box" class="slide-nav__field--nav-box__list">
+  <div
+    id="slide-nav__savings-featured-shops"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+  <div
+    id="slide-nav__electronics"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+  <div
+    id="slide-nav__clothing-shoes-accessories"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+  <div
+    id="slide-nav__home-furniture-appliances"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+  <div
+    id="slide-nav__toys-video-games"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+  <div
+    id="slide-nav__home-improvement"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+  <div id="slide-nav__baby" class="slide-nav__field--nav-box__main-list"></div>
+  <div
+    id="slide-nav__household-essentials"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+  <div
+    id="slide-nav__personal-care"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+  <div
+    id="slide-nav__patio-garden"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+  <div
+    id="slide-nav__sports-outdoors"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+  <div
+    id="slide-nav__gift-cards"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+  <div
+    id="slide-nav__auto-tires-industrial"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+  <div
+    id="slide-nav__movies-music-books"
+    class="slide-nav__field--nav-box__main-list"
+  ></div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav__savings-featured-shops").load(
+      "./template/slide-nav/department/savings-featured-shops.html"
+    );
+  });
+  $(document).ready(function () {
+    $("#slide-nav__electronics").load(
+      "./template/slide-nav/department/electronics.html"
+    );
+  });
+  $(document).ready(function () {
+    $("#slide-nav__clothing-shoes-accessories").load(
+      "./template/slide-nav/department/clothing-shoes-accessories.html"
+    );
+  });
+  $(document).ready(function () {
+    $("#slide-nav__home-furniture-appliances").load(
+      "./template/slide-nav/department/home-furniture-appliances.html"
+    );
+  });
+  $(document).ready(function () {
+    $("#slide-nav__toys-video-games").load(
+      "./template/slide-nav/department/toys-video-games.html"
+    );
+  });
+  $(document).ready(function () {
+    $("#slide-nav__home-improvement").load(
+      "./template/slide-nav/department/home-improvement.html"
+    );
+  });
+  $(document).ready(function () {
+    $("#slide-nav__baby").load("./template/slide-nav/department/baby.html");
+  });
+  $(document).ready(function () {
+    $("#slide-nav__household-essentials").load(
+      "./template/slide-nav/department/household-essentials.html"
+    );
+  });
+  $(document).ready(function () {
+    $("#slide-nav__personal-care").load(
+      "./template/slide-nav/department/personal-care.html"
+    );
+  });
+  $(document).ready(function () {
+    $("#slide-nav__patio-garden").load(
+      "./template/slide-nav/department/patio-garden.html"
+    );
+  });
+  $(document).ready(function () {
+    $("#slide-nav__sports-outdoors").load(
+      "./template/slide-nav/department/sports-outdoors.html"
+    );
+  });
+  $(document).ready(function () {
+    $("#slide-nav__gift-cards").load(
+      "./template/slide-nav/department/gift-cards.html"
+    );
+  });
+  $(document).ready(function () {
+    $("#slide-nav__auto-tires-industrial").load(
+      "./template/slide-nav/department/auto-tires-industrial.html"
+    );
+  });
+  $(document).ready(function () {
+    $("#slide-nav__movies-music-books").load(
+      "./template/slide-nav/department/movies-music-books.html"
+    );
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav-department-toggle").on("click", function () {
+      if ($("#slide-nav-department-box").css("display") === "none") {
+        $("#slide-nav-department-box").css("display", "flex");
+        $("#slide-nav-department-toggle-icon").css(
+          "transform",
+          "rotate(90deg)"
+        );
+      } else {
+        $("#slide-nav-department-box").css("display", "none");
+        $("#slide-nav-department-toggle-icon").css("transform", "none");
+      }
+    });
+  });
+</script>

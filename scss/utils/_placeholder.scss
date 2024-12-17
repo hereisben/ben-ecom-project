@@ -9,6 +9,11 @@
   justify-content: center;
 }
 
+%columnFlex {
+  display: flex;
+  flex-direction: column;
+}
+
 %isRelatived {
   position: relative;
 }

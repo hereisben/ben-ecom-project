@@ -1,0 +1,71 @@
+<div
+  id="slide-nav-electronics-toggle"
+  class="slide-nav__field--nav-box__main-list__toggle"
+>
+  <span class="slide-nav__field--nav-box__main-list__toggle--text"
+    >Electronics</span
+  >
+  <svg
+    class="slide-nav__field--nav-box__main-list__toggle--icon"
+    width="6"
+    height="10"
+    viewBox="0 0 6 10"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1.25 1.5L4.75 5L1.25 8.5"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</div>
+
+<div id="slide-nav-electronics-box" class="slide-nav__field--nav-box__sub-list">
+  <div
+    id="slide-nav-tv-video"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-wearable-tech"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-computer"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-savings"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-cell-phones"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav-tv-video").load("./template/department/tv-video.html");
+    $("#slide-nav-wearable-tech").load(
+      "./template/department/wearable-tech.html"
+    );
+    $("#slide-nav-computer").load("./template/department/computer.html");
+    $("#slide-nav-savings").load("./template/department/savings.html");
+    $("#slide-nav-cell-phones").load("./template/department/cell-phones.html");
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav-electronics-toggle").on("click", function () {
+      if ($("#slide-nav-electronics-box").css("display") === "none") {
+        $("#slide-nav-electronics-box").css("display", "flex");
+      } else {
+        $("#slide-nav-electronics-box").css("display", "none");
+      }
+    });
+  });
+</script>

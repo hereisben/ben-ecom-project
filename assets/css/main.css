@@ -160,6 +160,8 @@ html {
   /*ICON*/
   --icon: brightness(0) saturate(100%) invert(7%) sepia(33%) saturate(1164%)
     hue-rotate(210deg) brightness(99%) contrast(96%);
+  --slide-nav-icon: brightness(0) saturate(100%) invert(12%) sepia(37%)
+    saturate(626%) hue-rotate(210deg) brightness(92%) contrast(106%);
   --top-bar-icon-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
   --filter-icon: brightness(0) saturate(100%) invert(8%) sepia(55%)
     saturate(750%) hue-rotate(210deg) brightness(93%) contrast(96%);
@@ -192,6 +194,8 @@ html.dark {
   /*ICON*/
   --icon: brightness(0) saturate(100%) invert(95%) sepia(100%) saturate(0%)
     hue-rotate(103deg) brightness(106%) contrast(105%);
+  --slide-nav-icon: brightness(0) saturate(100%) invert(98%) sepia(1%)
+    saturate(834%) hue-rotate(190deg) brightness(80%) contrast(81%);
   --top-bar-icon-shadow: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
   --filter-icon: brightness(0) saturate(100%) invert(100%) sepia(98%)
     saturate(2%) hue-rotate(327deg) brightness(117%) contrast(100%);
@@ -223,7 +227,8 @@ body {
   font-family: "Gordita", sans-serif;
 }
 
-.product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input::before, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input .product__filter--price-jar__limits--field__input--value, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field .product__filter--sw-jar__list-box--field__select, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field .product__filter--sw-jar__list-box--field__select option, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__tag-box div label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__tag-box div label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text:hover, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__result-button .product__filter--action__button--text, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item .topbar__nav--item-link, .topbar .row .right-nav-box .topbar__search .topbar__search--input, .topbar .row .right-nav-box .topbar__search .topbar__search--btn > span, .topbar .row .right-nav-box .user-nav > span, .topbar .row .right-nav-box .user-nav .user-nav__btn > span, .dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--heading, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, .product .product__list .product__item .product__item--info .product__item--info__label, .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--price, .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--rate, .product .product__filter .product__filter--heading, .product .product__filter .product__filter--box .product__filter--jar .product__filter--jar__label {
+.product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input::before, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input .product__filter--price-jar__limits--field__input--value, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field .product__filter--sw-jar__list-box--field__select, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field .product__filter--sw-jar__list-box--field__select option, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__tag-box div label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__tag-box div label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text:hover, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__result-button .product__filter--action__button--text, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item .topbar__nav--item-link, .topbar .row .right-nav-box .topbar__search .topbar__search--input, body .header .slide-nav .slide-nav__field .slide-nav__field--counts .slide-nav__field--counts__label,
+body .header .slide-nav .slide-nav__field .slide-nav__field--counts .slide-nav__field--counts__value, .dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--heading, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list .slide-nav__field--nav-box__sub-list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, .topbar .row .right-nav-box .topbar__search .topbar__search--btn > span, .topbar .row .right-nav-box .user-nav > span, .topbar .row .right-nav-box .user-nav .user-nav__btn > span, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box .slide-nav__field--nav-box__toggle .slide-nav__field--nav-box__toggle--label, .product .product__list .product__item .product__item--info .product__item--info__label, .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--price, .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--rate, .product .product__filter .product__filter--heading, .product .product__filter .product__filter--box .product__filter--jar .product__filter--jar__label {
   font-weight: 500;
 }
 
@@ -231,7 +236,7 @@ body {
   font-weight: 700;
 }
 
-.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--list .dropdown__box--main-box__menu--list__item, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list li .dropdown__box--sub-box__jar--menu__list--item, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input::placeholder, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text, .topbar .row .right-nav-box .topbar__search .topbar__search--input::placeholder, .product .product__list .product__item .product__item--info .product__item--info__category, .category .category__list .category__item .category__item--info .category__item--info-desc {
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__main-list__toggle .slide-nav__field--nav-box__main-list__toggle--text, .dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--list .dropdown__box--main-box__menu--list__item, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list li .dropdown__box--sub-box__jar--menu__list--item, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list .slide-nav__field--nav-box__sub-list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list .dropdown__box--sub-box__jar--menu__list--item, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list .dropdown__box--sub-box__jar--menu__list--item, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list .dropdown__box--sub-box__jar--menu__list--item, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input::placeholder, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text, .topbar .row .right-nav-box .topbar__search .topbar__search--input::placeholder, .product .product__list .product__item .product__item--info .product__item--info__category, .category .category__list .category__item .category__item--info .category__item--info-desc {
   font-weight: 400;
 }
 
@@ -250,17 +255,18 @@ body {
   line-height: 3.2rem; /* 138.462% */
 }
 
-.product .product__list .product__item .product__item--info .product__item--info__category, .category .category__list .category__item .category__item--info .category__item--info-desc, .dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--heading, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, .product .product__list .product__item .product__item--info .product__item--info__label, .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--price, .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--rate, .side-categories-area .side-categories .side-categories__list .side-categories__item .side-categories__item--label {
+.product .product__list .product__item .product__item--info .product__item--info__category, .category .category__list .category__item .category__item--info .category__item--info-desc, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box .slide-nav__field--nav-box__toggle .slide-nav__field--nav-box__toggle--label, .product .product__list .product__item .product__item--info .product__item--info__label, .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--price, .product .product__list .product__item .product__item--info .product__item--info__detail .product__item--info__detail--rate, .side-categories-area .side-categories .side-categories__list .side-categories__item .side-categories__item--label {
   font-size: 1.6rem;
   line-height: 2.4rem; /* 150% */
 }
 
-.product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input::placeholder, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text, .topbar .row .right-nav-box .topbar__search .topbar__search--input::placeholder, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text:hover, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__result-button .product__filter--action__button--text, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item .topbar__nav--item-link, .topbar .row .right-nav-box .topbar__search .topbar__search--input, .topbar .row .right-nav-box .topbar__search .topbar__search--btn > span, .topbar .row .right-nav-box .user-nav > span, .topbar .row .right-nav-box .user-nav .user-nav__btn > span {
+.product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input::placeholder, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text, .topbar .row .right-nav-box .topbar__search .topbar__search--input::placeholder, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar .product__filter--brand-jar__search-bar--input, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__cancel-button .product__filter--action__button--text:hover, .product .product__filter .product__filter--action .product__filter--action__button.product__filter--action__result-button .product__filter--action__button--text, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item .topbar__nav--item-link, .topbar .row .right-nav-box .topbar__search .topbar__search--input, body .header .slide-nav .slide-nav__field .slide-nav__field--counts .slide-nav__field--counts__label,
+body .header .slide-nav .slide-nav__field .slide-nav__field--counts .slide-nav__field--counts__value, .dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--heading, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list .slide-nav__field--nav-box__sub-list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, .topbar .row .right-nav-box .topbar__search .topbar__search--btn > span, .topbar .row .right-nav-box .user-nav > span, .topbar .row .right-nav-box .user-nav .user-nav__btn > span {
   font-size: 1.5rem;
   line-height: 2.2rem;
 }
 
-.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--list .dropdown__box--main-box__menu--list__item, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list li .dropdown__box--sub-box__jar--menu__list--item, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input::before, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input .product__filter--price-jar__limits--field__input--value, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field .product__filter--sw-jar__list-box--field__select, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field .product__filter--sw-jar__list-box--field__select option, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__tag-box div label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__tag-box div label, .product .product__top-product .product__top-product--filter__btn .product__top-product--filter__btn--text {
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__main-list__toggle .slide-nav__field--nav-box__main-list__toggle--text, .dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--list .dropdown__box--main-box__menu--list__item, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list li .dropdown__box--sub-box__jar--menu__list--item, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list .slide-nav__field--nav-box__sub-list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list .dropdown__box--sub-box__jar--menu__list--item, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list .dropdown__box--sub-box__jar--menu__list--item, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list .dropdown__box--sub-box__jar--menu__list--item, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input::before, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input .product__filter--price-jar__limits--field__input--value, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field .product__filter--sw-jar__list-box--field__select, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field .product__filter--sw-jar__list-box--field__select option, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__tag-box div label, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__tag-box div label, .product .product__top-product .product__top-product--filter__btn .product__top-product--filter__btn--text {
   font-size: 1.4rem;
   line-height: 2rem; /* 142.857% */
 }
@@ -283,7 +289,7 @@ html {
   --product-filter-btn-text-color: #1a162e;
 }
 
-.product .product__top-product, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__tag-box, .product .product__filter .product__filter--action, .topbar .row, .topbar .row .topbar__logo .topbar__logo--brand, .topbar .row .topbar__nav .topbar__nav--list, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item .topbar__nav--item-link, .topbar .row .right-nav-box, .topbar .row .right-nav-box .topbar__search, .topbar .row .right-nav-box .user-nav, .topbar .row .right-nav-box .user-nav .user-nav__btn, .side-categories-area .side-categories .side-categories__list .side-categories__item, .dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--heading, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, .product .product__list .product__item .product__item--info .product__item--info__detail, .category .category__list .category__item, .product .product__top-product .product__top-product--filter__btn {
+.product .product__top-product, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__search-bar, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__tag-box, .product .product__filter .product__filter--action, .topbar .row, .topbar .row .topbar__logo .topbar__logo--brand, .topbar .row .topbar__nav .topbar__nav--list, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item, .topbar .row .topbar__nav .topbar__nav--list .topbar__nav--item .topbar__nav--item-link, .topbar .row .right-nav-box, .topbar .row .right-nav-box .topbar__search, .topbar .row .right-nav-box .user-nav, .topbar .row .right-nav-box .user-nav .user-nav__btn, body .header .slide-nav .slide-nav__field .slide-nav__field--counts, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box .slide-nav__field--nav-box__toggle, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__main-list__toggle, .side-categories-area .side-categories .side-categories__list .side-categories__item, .dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--heading, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list .slide-nav__field--nav-box__sub-list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, .product .product__list .product__item .product__item--info .product__item--info__detail, .category .category__list .category__item, .product .product__top-product .product__top-product--filter__btn {
   display: flex;
   align-items: center;
 }
@@ -292,6 +298,11 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+body .header .slide-nav, body .header .slide-nav .slide-nav__field, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list {
+  display: flex;
+  flex-direction: column;
 }
 
 .product, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__slider, .product .product__filter .product__filter--box .product__filter--jar.product__filter--price-jar .product__filter--price-jar__limits .product__filter--price-jar__limits--field .product__filter--price-jar__limits--field__input, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__list-box .product__filter--sw-jar__list-box--field, .slide, .slide .slide__box, body, .topbar, .product .product__filter .product__filter--box .product__filter--jar.product__filter--size-weight-jar .product__filter--sw-jar__box.product__filter--sw-jar__tag-box, .product .product__filter .product__filter--box .product__filter--jar.product__filter--brand-jar .product__filter--brand-jar__tag-box, .product .product__list .product__item .product__item--thumb {
@@ -528,39 +539,39 @@ html {
   color: var(--first-typo-color);
 }
 
-.dropdown .dropdown__box .dropdown__box--main-box, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar {
+.dropdown .dropdown__box .dropdown__box--main-box, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list .slide-nav__field--nav-box__sub-list--jar, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar {
   display: flex;
   gap: 1.4rem;
 }
 @media (max-width: 1199.98px) {
-  .dropdown .dropdown__box .dropdown__box--main-box, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar {
+  .dropdown .dropdown__box .dropdown__box--main-box, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list .slide-nav__field--nav-box__sub-list--jar, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar {
     gap: 1rem;
   }
 }
 
-.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__icon, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--icon {
+.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__icon, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--icon, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list .slide-nav__field--nav-box__sub-list--jar .dropdown__box--sub-box__jar--icon, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--icon, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--icon {
   height: 3.6rem;
   width: auto;
   color: var(--dropdown-icon-color);
 }
 
-.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--heading, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading {
+.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--heading, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list .slide-nav__field--nav-box__sub-list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__heading {
   user-select: none;
   height: 3.6rem;
   color: var(--fifth-typo-color);
 }
 
-.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--list, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list {
+.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--list, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list .slide-nav__field--nav-box__sub-list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
 }
 
-.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--list .dropdown__box--main-box__menu--list__item, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list li .dropdown__box--sub-box__jar--menu__list--item {
+.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--list .dropdown__box--main-box__menu--list__item, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list li .dropdown__box--sub-box__jar--menu__list--item, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list .slide-nav__field--nav-box__sub-list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list .dropdown__box--sub-box__jar--menu__list--item, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list .dropdown__box--sub-box__jar--menu__list--item, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list .dropdown__box--sub-box__jar--menu__list--item {
   color: var(--fifth-typo-color);
 }
-.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--list .dropdown__box--main-box__menu--list__item:hover, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list li .dropdown__box--sub-box__jar--menu__list--item:hover {
+.dropdown .dropdown__box .dropdown__box--main-box .dropdown__box--main-box__menu .dropdown__box--main-box__menu--list .dropdown__box--main-box__menu--list__item:hover, .dropdown .dropdown__box .dropdown__box--sub-box .dropdown__box--sub-box__jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list li .dropdown__box--sub-box__jar--menu__list--item:hover, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list .slide-nav__field--nav-box__sub-list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list .dropdown__box--sub-box__jar--menu__list--item:hover, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list .dropdown__box--sub-box__jar--menu__list--item:hover, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list .slide-nav__Field--nav-box__list--jar .dropdown__box--sub-box__jar--menu .dropdown__box--sub-box__jar--menu__list .dropdown__box--sub-box__jar--menu__list--item:hover {
   font-weight: 500;
   color: var(--dropdown-hover-color);
 }
@@ -649,6 +660,56 @@ html {
     line-height: 2rem;
     font-weight: 400;
   }
+}
+
+body .header .slide-nav .slide-nav__field .slide-nav__field--counts {
+  cursor: pointer;
+}
+body .header .slide-nav .slide-nav__field .slide-nav__field--counts .slide-nav__field--counts__icon {
+  width: auto;
+  height: auto;
+  filter: var(--slide-nav-icon);
+}
+body .header .slide-nav .slide-nav__field .slide-nav__field--counts .slide-nav__field--counts__label {
+  margin-left: 1.5rem;
+}
+body .header .slide-nav .slide-nav__field .slide-nav__field--counts .slide-nav__field--counts__value {
+  margin-left: auto;
+}
+body .header .slide-nav .slide-nav__field .slide-nav__field--counts .slide-nav__field--counts__label,
+body .header .slide-nav .slide-nav__field .slide-nav__field--counts .slide-nav__field--counts__value {
+  color: var(--fifth-typo-color);
+}
+
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box .slide-nav__field--nav-box__toggle, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__main-list__toggle {
+  user-select: none;
+  cursor: pointer;
+  justify-content: space-between;
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box .slide-nav__field--nav-box__toggle svg, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__main-list__toggle svg {
+  width: auto;
+  height: auto;
+}
+
+.dropdown .dropdown__box, body .header .slide-nav, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list {
+  overflow-y: scroll;
+}
+.dropdown .dropdown__box::-webkit-scrollbar-track, body .header .slide-nav::-webkit-scrollbar-track, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list::-webkit-scrollbar-track, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list::-webkit-scrollbar-track, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: var(--second-background-color);
+}
+.dropdown .dropdown__box::-webkit-scrollbar, body .header .slide-nav::-webkit-scrollbar, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list::-webkit-scrollbar, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list::-webkit-scrollbar, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--second-background-color);
+}
+.dropdown .dropdown__box::-webkit-scrollbar-thumb, body .header .slide-nav::-webkit-scrollbar-thumb, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list::-webkit-scrollbar-thumb, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list::-webkit-scrollbar-thumb, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--fifth-background-color);
+}
+.dropdown .dropdown__box::-webkit-scrollbar-track-piece, body .header .slide-nav::-webkit-scrollbar-track-piece, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list::-webkit-scrollbar-track-piece, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list::-webkit-scrollbar-track-piece, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list::-webkit-scrollbar-track-piece {
+  background-color: var(--second-background-color);
 }
 
 html {
@@ -1643,16 +1704,75 @@ body .header:has(#beauty-dropdown[style*="display: block"]) .dropdown__vector {
   }
 }
 body .header .slide-nav {
-  display: none;
+  align-items: flex-start;
+  gap: 2rem;
   position: fixed;
   width: 86.66vw;
+  max-width: 66.5rem;
   height: 100vh;
   left: 0rem;
   top: 0rem;
+  padding: 2rem;
   background-color: var(--second-background-color);
   border-radius: 0rem 2rem 2rem 0rem;
 }
-
+body .header .slide-nav .slide-nav__hide-btn {
+  cursor: pointer;
+  background: none;
+}
+body .header .slide-nav .slide-nav__hide-btn .slide-nav__hide-btn--icon {
+  filter: var(--slide-nav-icon);
+}
+body .header .slide-nav .slide-nav__field {
+  width: 100%;
+  gap: 2rem;
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box {
+  gap: 2rem;
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box .slide-nav__field--nav-box__toggle {
+  height: 2.4rem;
+  color: var(--fifth-typo-color);
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box .slide-nav__field--nav-box__list {
+  display: none;
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list {
+  flex-direction: column;
+  gap: 1.4rem;
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list {
+  gap: 1.4rem;
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__main-list__toggle {
+  height: 2rem;
+  color: var(--fifth-typo-color);
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__main-list__toggle .slide-nav__field--nav-box__main-list__toggle--icon {
+  display: none;
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list:hover .slide-nav__field--nav-box__main-list__toggle--text {
+  color: var(--dropdown-hover-color);
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list:has(.slide-nav__field--nav-box__sub-list[style*="display: flex"]) .slide-nav__field--nav-box__main-list__toggle--text {
+  color: var(--dropdown-hover-color);
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list:has(.slide-nav__field--nav-box__sub-list[style*="display: flex"]) .slide-nav__field--nav-box__main-list__toggle--icon {
+  transform: rotate(90deg);
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list:hover .slide-nav__field--nav-box__main-list__toggle--icon {
+  display: block;
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__department .slide-nav__field--nav-box__list .slide-nav__field--nav-box__main-list .slide-nav__field--nav-box__sub-list {
+  display: none;
+  gap: 3rem;
+  max-height: 52.2rem;
+}
+body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__grocery .slide-nav__field--nav-box__list, body .header .slide-nav .slide-nav__field#slide-nav__menu .slide-nav__field--nav-box.slide-nav__beauty .slide-nav__field--nav-box__list {
+  flex-direction: column;
+  gap: 3rem;
+  max-height: 52.2rem;
+}
 body {
   background-color: var(--main-background-color);
 }
@@ -2279,24 +2399,6 @@ main:has(.category__checkbox:checked) .product-area {
 }
 .dropdown .dropdown__box {
   justify-content: space-between;
-  overflow-y: scroll;
-}
-.dropdown .dropdown__box::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  background-color: var(--second-background-color);
-}
-.dropdown .dropdown__box::-webkit-scrollbar {
-  width: 12px;
-  background-color: var(--second-background-color);
-}
-.dropdown .dropdown__box::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
-  background-color: var(--fifth-background-color);
-}
-.dropdown .dropdown__box::-webkit-scrollbar-track-piece {
-  background-color: var(--second-background-color);
 }
 .dropdown .dropdown__box.all-department-dropdown-box {
   width: 21.935483871%;

@@ -169,7 +169,8 @@ function cancelFilterButton() {
 
 function addItemToCart() {
   const favItems = document.querySelectorAll(".product__item--thumb__checkbox"),
-    itemsAdded = document.getElementById("user-nav__btn--data");
+    itemsAdded = document.querySelectorAll(".favorite-items-value");
+  // itemsAdded = document.getElementById("user-nav__btn--data");
 
   let itemsCount = 0;
   favItems.forEach((favItem) => {
@@ -179,7 +180,10 @@ function addItemToCart() {
       } else {
         itemsCount--;
       }
-      itemsAdded.innerHTML = String(itemsCount).padStart(2, "0");
+      // itemsAdded.innerHTML = String(itemsCount).padStart(2, "0");
+      itemsAdded.forEach((itemAdded) => {
+        itemAdded.innerHTML = String(itemsCount).padStart(2, "0");
+      });
     });
   });
 }

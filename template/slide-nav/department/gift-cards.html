@@ -1,0 +1,77 @@
+<div
+  id="slide-nav-gift-cards-toggle"
+  class="slide-nav__field--nav-box__main-list__toggle"
+>
+  <span class="slide-nav__field--nav-box__main-list__toggle--text"
+    >Gift Cards</span
+  >
+  <svg
+    class="slide-nav__field--nav-box__main-list__toggle--icon"
+    width="6"
+    height="10"
+    viewBox="0 0 6 10"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1.25 1.5L4.75 5L1.25 8.5"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</div>
+
+<div id="slide-nav-gift-cards-box" class="slide-nav__field--nav-box__sub-list">
+  <div
+    id="slide-nav-retail-stores"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-restaurants"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-entertainment"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-travel-experiences"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+  <div
+    id="slide-nav-specialty-stores"
+    class="slide-nav__field--nav-box__sub-list--jar"
+  ></div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav-retail-stores").load(
+      "./template/department/retail-stores.html"
+    );
+    $("#slide-nav-restaurants").load("./template/department/restaurants.html");
+    $("#slide-nav-entertainment").load(
+      "./template/department/entertainment.html"
+    );
+    $("#slide-nav-travel-experiences").load(
+      "./template/department/travel-experiences.html"
+    );
+    $("#slide-nav-specialty-stores").load(
+      "./template/department/specialty-stores.html"
+    );
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav-gift-cards-toggle").on("click", function () {
+      if ($("#slide-nav-gift-cards-box").css("display") === "none") {
+        $("#slide-nav-gift-cards-box").css("display", "flex");
+      } else {
+        $("#slide-nav-gift-cards-box").css("display", "none");
+      }
+    });
+  });
+</script>

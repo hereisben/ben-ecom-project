@@ -1,4 +1,4 @@
-<button class="slide-nav__hide-btn">
+<button id="slide-nav__hide-btn" class="slide-nav__hide-btn">
   <svg
     class="slide-nav__hide-btn--icon"
     width="17"
@@ -8,14 +8,14 @@
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M1.25 7.27393L16.25 7.27393"
+      d="M1.25 7.27539L16.25 7.27539"
       stroke="currentColor"
       stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
-      d="M7.2998 13.2985L1.2498 7.27451L7.2998 1.24951"
+      d="M7.2998 13.299L1.2498 7.275L7.2998 1.25"
       stroke="currentColor"
       stroke-width="1.5"
       stroke-linecap="round"
@@ -23,5 +23,66 @@
     />
   </svg>
 </button>
-<div class="slide-nav__box"></div>
-<div class="slide-nav__box"></div>
+
+<!-- Cart & Favorite -->
+<div class="slide-nav__field">
+  <div
+    id="slide-nav__field--card-counts"
+    class="slide-nav__field--counts"
+  ></div>
+
+  <div
+    id="slide-nav__field--favorite-counts"
+    class="slide-nav__field--counts"
+  ></div>
+</div>
+
+<!-- Menu -->
+
+<div id="slide-nav__menu" class="slide-nav__field">
+  <nav
+    id="slide-nav__department"
+    class="slide-nav__field--nav-box slide-nav__department"
+  ></nav>
+
+  <nav
+    id="slide-nav__grocery"
+    class="slide-nav__field--nav-box slide-nav__grocery"
+  ></nav>
+
+  <nav
+    id="slide-nav__beauty"
+    class="slide-nav__field--nav-box slide-nav__beauty"
+  ></nav>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav__field--card-counts").load(
+      "./template/slide-nav/slide-nav__cart.html"
+    );
+    $("#slide-nav__field--favorite-counts").load(
+      "./template/slide-nav/slide-nav__favorite.html"
+    );
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav__department").load(
+      "./template/slide-nav/slide-nav__department.html"
+    );
+    $("#slide-nav__grocery").load(
+      "./template/slide-nav/slide-nav__grocery.html"
+    );
+    $("#slide-nav__beauty").load("./template/slide-nav/slide-nav__beauty.html");
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $("#slide-nav__hide-btn").on("click", function () {
+      $("#slide-nav").hide();
+    });
+  });
+</script>
